@@ -1,0 +1,30 @@
+baseURL = "https://idiotspapa.github.io/GitBlog/"
+title = "IdiotsPapa's Dev Blog"
+theme = "PaperMod"
+languageCode = "ko"
+paginate = 5
+enableRobotsTXT = true
+
+[params]
+  author = "IdiotsPapa"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowCodeCopyButtons = true
+  comments = false
+
+[menu]
+  [[menu.main]]
+    name = "홈"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "글 목록"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    name = "소개"
+    url = "/about/"
+    weight = 3
