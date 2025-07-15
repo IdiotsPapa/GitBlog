@@ -2,7 +2,8 @@ baseURL = "https://idiotspapa.github.io/GitBlog/"
 title = "IdiotsPapa's Dev Blog"
 theme = "PaperMod"
 languageCode = "ko"
-paginate = 5
+[pagination]
+  pagerSize = 5
 enableRobotsTXT = true
 
 [params]
