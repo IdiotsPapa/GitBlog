@@ -8,7 +8,26 @@
 <title>Hello, Git 블로그! | IdiotsPapa&#39;s Dev Blog</title>
 <meta name="keywords" content="Git, 블로그">
 <meta name="description" content="이것은 Hugo &#43; GitHub Pages로 만든 첫 번째 포스트입니다 🎉
-앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.">
+앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.
+✅ 1. 프로젝트 목표
+Hugo &#43; GitHub Pages로 정적 블로그 생성
+저장소: https://github.com/IdiotsPapa/GitBlog
+🛠️ 2. 사용된 명령어 및 역할
+명령어	역할
+choco install hugo -confirm	Chocolatey로 Hugo 설치
+hugo version	설치된 Hugo 버전 확인
+hugo new site hugo-blog	새 Hugo 블로그 프로젝트 생성
+cd hugo-blog	생성된 폴더로 이동
+git init	Git 초기화
+git remote add origin https://github.com/&hellip;	GitHub 원격 저장소 연결
+git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod	PaperMod 테마 추가
+hugo new posts/hello.md	새 블로그 글 생성
+hugo	정적 파일(public 폴더) 빌드
+git checkout &ndash;orphan gh-pages	GitHub Pages용 빈 브랜치 생성
+git rm -rf .	gh-pages 브랜치의 모든 파일 삭제
+git add, git commit, git push	변경사항 커밋/푸시
+.github/workflows/gh-pages.yml 작성	GitHub Actions 자동 배포 설정
+git push origin main	Hugo 소스와 설정 푸시 (자동 배포 트리거)">
 <meta name="author" content="IdiotsPapa">
 <link rel="canonical" href="https://idiotspapa.github.io/GitBlog/posts/hello/">
 <link crossorigin="anonymous" href="/GitBlog/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
@@ -60,7 +79,9 @@
   <meta property="og:site_name" content="IdiotsPapa&#39;s Dev Blog">
   <meta property="og:title" content="Hello, Git 블로그!">
   <meta property="og:description" content="이것은 Hugo &#43; GitHub Pages로 만든 첫 번째 포스트입니다 🎉
-앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.">
+앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.
+✅ 1. 프로젝트 목표 Hugo &#43; GitHub Pages로 정적 블로그 생성 저장소: https://github.com/IdiotsPapa/GitBlog
+🛠️ 2. 사용된 명령어 및 역할 명령어	역할 choco install hugo -confirm	Chocolatey로 Hugo 설치 hugo version	설치된 Hugo 버전 확인 hugo new site hugo-blog	새 Hugo 블로그 프로젝트 생성 cd hugo-blog	생성된 폴더로 이동 git init	Git 초기화 git remote add origin https://github.com/…	GitHub 원격 저장소 연결 git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod	PaperMod 테마 추가 hugo new posts/hello.md	새 블로그 글 생성 hugo	정적 파일(public 폴더) 빌드 git checkout –orphan gh-pages	GitHub Pages용 빈 브랜치 생성 git rm -rf .	gh-pages 브랜치의 모든 파일 삭제 git add, git commit, git push	변경사항 커밋/푸시 .github/workflows/gh-pages.yml 작성	GitHub Actions 자동 배포 설정 git push origin main	Hugo 소스와 설정 푸시 (자동 배포 트리거)">
   <meta property="og:locale" content="ko">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -71,7 +92,26 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello, Git 블로그!">
 <meta name="twitter:description" content="이것은 Hugo &#43; GitHub Pages로 만든 첫 번째 포스트입니다 🎉
-앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.">
+앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.
+✅ 1. 프로젝트 목표
+Hugo &#43; GitHub Pages로 정적 블로그 생성
+저장소: https://github.com/IdiotsPapa/GitBlog
+🛠️ 2. 사용된 명령어 및 역할
+명령어	역할
+choco install hugo -confirm	Chocolatey로 Hugo 설치
+hugo version	설치된 Hugo 버전 확인
+hugo new site hugo-blog	새 Hugo 블로그 프로젝트 생성
+cd hugo-blog	생성된 폴더로 이동
+git init	Git 초기화
+git remote add origin https://github.com/&hellip;	GitHub 원격 저장소 연결
+git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod	PaperMod 테마 추가
+hugo new posts/hello.md	새 블로그 글 생성
+hugo	정적 파일(public 폴더) 빌드
+git checkout &ndash;orphan gh-pages	GitHub Pages용 빈 브랜치 생성
+git rm -rf .	gh-pages 브랜치의 모든 파일 삭제
+git add, git commit, git push	변경사항 커밋/푸시
+.github/workflows/gh-pages.yml 작성	GitHub Actions 자동 배포 설정
+git push origin main	Hugo 소스와 설정 푸시 (자동 배포 트리거)">
 
 
 <script type="application/ld+json">
@@ -100,12 +140,12 @@
   "@type": "BlogPosting",
   "headline": "Hello, Git 블로그!",
   "name": "Hello, Git 블로그!",
-  "description": "이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉\n앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.\n",
+  "description": "이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉\n앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.\n✅ 1. 프로젝트 목표 Hugo + GitHub Pages로 정적 블로그 생성 저장소: https://github.com/IdiotsPapa/GitBlog\n🛠️ 2. 사용된 명령어 및 역할 명령어\t역할 choco install hugo -confirm\tChocolatey로 Hugo 설치 hugo version\t설치된 Hugo 버전 확인 hugo new site hugo-blog\t새 Hugo 블로그 프로젝트 생성 cd hugo-blog\t생성된 폴더로 이동 git init\tGit 초기화 git remote add origin https://github.com/\u0026hellip;\tGitHub 원격 저장소 연결 git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod\tPaperMod 테마 추가 hugo new posts/hello.md\t새 블로그 글 생성 hugo\t정적 파일(public 폴더) 빌드 git checkout \u0026ndash;orphan gh-pages\tGitHub Pages용 빈 브랜치 생성 git rm -rf .\tgh-pages 브랜치의 모든 파일 삭제 git add, git commit, git push\t변경사항 커밋/푸시 .github/workflows/gh-pages.yml 작성\tGitHub Actions 자동 배포 설정 git push origin main\tHugo 소스와 설정 푸시 (자동 배포 트리거)\n",
   "keywords": [
     "Git", "블로그"
   ],
-  "articleBody": "이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉\n앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.\n",
-  "wordCount" : "19",
+  "articleBody": "이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉\n앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.\n✅ 1. 프로젝트 목표 Hugo + GitHub Pages로 정적 블로그 생성 저장소: https://github.com/IdiotsPapa/GitBlog\n🛠️ 2. 사용된 명령어 및 역할 명령어\t역할 choco install hugo -confirm\tChocolatey로 Hugo 설치 hugo version\t설치된 Hugo 버전 확인 hugo new site hugo-blog\t새 Hugo 블로그 프로젝트 생성 cd hugo-blog\t생성된 폴더로 이동 git init\tGit 초기화 git remote add origin https://github.com/…\tGitHub 원격 저장소 연결 git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod\tPaperMod 테마 추가 hugo new posts/hello.md\t새 블로그 글 생성 hugo\t정적 파일(public 폴더) 빌드 git checkout –orphan gh-pages\tGitHub Pages용 빈 브랜치 생성 git rm -rf .\tgh-pages 브랜치의 모든 파일 삭제 git add, git commit, git push\t변경사항 커밋/푸시 .github/workflows/gh-pages.yml 작성\tGitHub Actions 자동 배포 설정 git push origin main\tHugo 소스와 설정 푸시 (자동 배포 트리거)\n📂 3. Hugo 프로젝트 구조 Hugo는 다음과 같은 기본 구조로 생성됩니다:\ncsharp 복사 편집 hugo-blog/ ├── archetypes/ # 새 콘텐츠 템플릿 │ └── default.md ├── content/ # 실제 포스트들 위치 │ └── posts/ │ └── hello.md ├── layouts/ # 커스텀 레이아웃 (선택) ├── static/ # 정적 리소스 (이미지, JS 등) ├── themes/ # 테마 저장소 (여기선 PaperMod) │ └── PaperMod/ ├── public/ # Hugo 빌드시 생성되는 정적 HTML ├── config.toml (또는 hugo.toml) # 설정파일 └── .github/ └── workflows/ └── gh-pages.yml # 자동 배포 설정\n🔁 4. GitHub Pages 자동 배포 흐름 main 브랜치에 글/설정 푸시\nGitHub Actions가 hugo로 빌드\npublic/ 내용을 gh-pages 브랜치에 푸시\ngh-pages 브랜치가 GitHub Pages로 호스팅됨\n🌐 5. 최종 결과 URL 항목\t주소 블로그 메인\thttps://idiotspapa.github.io/GitBlog/ 첫 글\thttps://idiotspapa.github.io/GitBlog/posts/hello/ 테스트 글\thttps://idiotspapa.github.io/GitBlog/posts/test/\n✅ 6. 다음 단계 추천 about.md, tags, categories 페이지 생성\n이미지 업로드 및 코드 블록 활용\nGoogle Analytics 연동\nSEO 메타 설정 (favicon, og:image 등)\n",
+  "wordCount" : "294",
   "inLanguage": "en",
   "datePublished": "2025-07-16T22:00:00+09:00",
   "dateModified": "2025-07-16T22:00:00+09:00",
@@ -195,12 +235,66 @@
     <h1 class="post-title entry-hint-parent">
       Hello, Git 블로그!
     </h1>
-    <div class="post-meta"><span title='2025-07-16 22:00:00 +0900 +0900'>July 16, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;IdiotsPapa
+    <div class="post-meta"><span title='2025-07-16 22:00:00 +0900 +0900'>July 16, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;IdiotsPapa
 
 </div>
   </header> 
   <div class="post-content"><p>이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉<br>
 앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.</p>
+<p>✅ 1. 프로젝트 목표
+Hugo + GitHub Pages로 정적 블로그 생성
+저장소: <a href="https://github.com/IdiotsPapa/GitBlog">https://github.com/IdiotsPapa/GitBlog</a></p>
+<p>🛠️ 2. 사용된 명령어 및 역할
+명령어	역할
+choco install hugo -confirm	Chocolatey로 Hugo 설치
+hugo version	설치된 Hugo 버전 확인
+hugo new site hugo-blog	새 Hugo 블로그 프로젝트 생성
+cd hugo-blog	생성된 폴더로 이동
+git init	Git 초기화
+git remote add origin <a href="https://github.com/">https://github.com/</a>&hellip;	GitHub 원격 저장소 연결
+git submodule add <a href="https://github.com/adityatelange/hugo-PaperMod">https://github.com/adityatelange/hugo-PaperMod</a> themes/PaperMod	PaperMod 테마 추가
+hugo new posts/hello.md	새 블로그 글 생성
+hugo	정적 파일(public 폴더) 빌드
+git checkout &ndash;orphan gh-pages	GitHub Pages용 빈 브랜치 생성
+git rm -rf .	gh-pages 브랜치의 모든 파일 삭제
+git add, git commit, git push	변경사항 커밋/푸시
+.github/workflows/gh-pages.yml 작성	GitHub Actions 자동 배포 설정
+git push origin main	Hugo 소스와 설정 푸시 (자동 배포 트리거)</p>
+<p>📂 3. Hugo 프로젝트 구조
+Hugo는 다음과 같은 기본 구조로 생성됩니다:</p>
+<p>csharp
+복사
+편집
+hugo-blog/
+├── archetypes/         # 새 콘텐츠 템플릿
+│   └── default.md
+├── content/            # 실제 포스트들 위치
+│   └── posts/
+│       └── hello.md
+├── layouts/            # 커스텀 레이아웃 (선택)
+├── static/             # 정적 리소스 (이미지, JS 등)
+├── themes/             # 테마 저장소 (여기선 PaperMod)
+│   └── PaperMod/
+├── public/             # Hugo 빌드시 생성되는 정적 HTML
+├── config.toml (또는 hugo.toml)  # 설정파일
+└── .github/
+└── workflows/
+└── gh-pages.yml   # 자동 배포 설정</p>
+<p>🔁 4. GitHub Pages 자동 배포 흐름
+main 브랜치에 글/설정 푸시</p>
+<p>GitHub Actions가 hugo로 빌드</p>
+<p>public/ 내용을 gh-pages 브랜치에 푸시</p>
+<p>gh-pages 브랜치가 GitHub Pages로 호스팅됨</p>
+<p>🌐 5. 최종 결과 URL
+항목	주소
+블로그 메인	https://idiotspapa.github.io/GitBlog/
+첫 글	https://idiotspapa.github.io/GitBlog/posts/hello/
+테스트 글	https://idiotspapa.github.io/GitBlog/posts/test/</p>
+<p>✅ 6. 다음 단계 추천
+about.md, tags, categories 페이지 생성</p>
+<p>이미지 업로드 및 코드 블록 활용</p>
+<p>Google Analytics 연동</p>
+<p>SEO 메타 설정 (favicon, og:image 등)</p>
 
 
   </div>
