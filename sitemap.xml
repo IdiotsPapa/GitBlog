@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://idiotspapa.github.io/GitBlog/</loc>
+    <lastmod>2025-07-16T23:59:07+09:00</lastmod>
+  </url><url>
     <loc>https://idiotspapa.github.io/GitBlog/categories/</loc>
     <lastmod>2025-07-16T22:00:00+09:00</lastmod>
   </url><url>
@@ -14,19 +17,16 @@
     <loc>https://idiotspapa.github.io/GitBlog/posts/hello/</loc>
     <lastmod>2025-07-16T22:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://idiotspapa.github.io/GitBlog/tags/hugo/</loc>
-    <lastmod>2025-07-16T22:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://idiotspapa.github.io/GitBlog/</loc>
-    <lastmod>2025-07-16T22:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://idiotspapa.github.io/GitBlog/posts/</loc>
     <lastmod>2025-07-16T22:00:00+09:00</lastmod>
   </url><url>
     <loc>https://idiotspapa.github.io/GitBlog/tags/</loc>
     <lastmod>2025-07-16T22:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://idiotspapa.github.io/GitBlog/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
+    <loc>https://idiotspapa.github.io/GitBlog/categories/%EA%B8%B0%EC%88%A0/</loc>
+    <lastmod>2025-07-16T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://idiotspapa.github.io/GitBlog/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
     <lastmod>2025-07-16T22:00:00+09:00</lastmod>
   </url>
 </urlset>

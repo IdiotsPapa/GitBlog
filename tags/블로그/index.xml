@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>블로그 on IdiotsPapa&#39;s Dev Blog</title>
+    <link>https://idiotspapa.github.io/GitBlog/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+    <description>Recent content in 블로그 on IdiotsPapa&#39;s Dev Blog</description>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 16 Jul 2025 22:00:00 +0900</lastBuildDate>
+    <atom:link href="https://idiotspapa.github.io/GitBlog/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, Git 블로그!</title>
+      <link>https://idiotspapa.github.io/GitBlog/posts/hello/</link>
+      <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/posts/hello/</guid>
+      <description>&lt;p&gt;이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉&lt;br&gt;
+앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
