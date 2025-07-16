@@ -6,8 +6,29 @@
     <description>Recent content on IdiotsPapa&#39;s Dev Blog</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>ko</language>
-    <lastBuildDate>Wed, 16 Jul 2025 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 00:39:54 +0900</lastBuildDate>
     <atom:link href="https://idiotspapa.github.io/GitBlog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This Blog</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/this-blog/</link>
+      <pubDate>Thu, 17 Jul 2025 00:39:54 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/this-blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Today Learned Hugo</title>
+      <link>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</link>
+      <pubDate>Thu, 17 Jul 2025 00:39:49 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://idiotspapa.github.io/GitBlog/about/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/about/</guid>
+      <description>&lt;p&gt;안녕하세요. 이 블로그는 제 개발 기록, 프로젝트, 공부 메모 등을 정리하는 공간입니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hello</title>
       <link>https://idiotspapa.github.io/GitBlog/posts/test/</link>
