@@ -6,7 +6,22 @@
     <description>Recent content on IdiotsPapa&#39;s Dev Blog</description>
     <generator>Hugo -- 0.148.1</generator>
     <language>ko</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Wed, 16 Jul 2025 22:00:00 +0900</lastBuildDate>
     <atom:link href="https://idiotspapa.github.io/GitBlog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello</title>
+      <link>https://idiotspapa.github.io/GitBlog/posts/test/</link>
+      <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/posts/test/</guid>
+      <description>&lt;p&gt;테스트 포스트입니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello, Git 블로그!</title>
+      <link>https://idiotspapa.github.io/GitBlog/posts/hello/</link>
+      <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/posts/hello/</guid>
+      <description>&lt;p&gt;이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉&lt;br&gt;
+앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
