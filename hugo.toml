@@ -26,6 +26,17 @@ enableRobotsTXT = true
     weight = 2
 
   [[menu.main]]
+    name = "노트"
+    url = "/notes/"
+    weight = 3
+
+  [[menu.main]]
+    name = "프로젝트"
+    url = "/projects/"
+    weight = 4
+
+  [[menu.main]]
     name = "소개"
     url = "/about/"
-    weight = 3
+    weight = 5
+
