@@ -4,64 +4,115 @@
     <title>IdiotsPapa&#39;s Dev Blog</title>
     <link>https://idiotspapa.github.io/GitBlog/</link>
     <description>Recent content on IdiotsPapa&#39;s Dev Blog</description>
-    <generator>Hugo -- 0.148.1</generator>
+    <generator>Hugo -- 0.164.0</generator>
     <language>ko</language>
-    <lastBuildDate>Thu, 17 Jul 2025 00:39:54 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:28:00 +0900</lastBuildDate>
     <atom:link href="https://idiotspapa.github.io/GitBlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>This Blog</title>
-      <link>https://idiotspapa.github.io/GitBlog/projects/this-blog/</link>
-      <pubDate>Thu, 17 Jul 2025 00:39:54 +0900</pubDate>
-      <guid>https://idiotspapa.github.io/GitBlog/projects/this-blog/</guid>
-      <description></description>
+      <title>생산현장 단말 시스템과 웹 전환</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/shop-floor-web-modernization/</link>
+      <pubDate>Tue, 21 Jul 2026 13:28:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/shop-floor-web-modernization/</guid>
+      <description>장기간 운영된 설치형 현장 시스템을 분석하고 .NET 8·React 기반 웹으로 점진 전환한 사례</description>
     </item>
     <item>
-      <title>Today Learned Hugo</title>
-      <link>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</link>
-      <pubDate>Thu, 17 Jul 2025 00:39:49 +0900</pubDate>
-      <guid>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</guid>
-      <description></description>
+      <title>Book Reading Manager — 가족 독서 기록 앱</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/book-reading-manager/</link>
+      <pubDate>Tue, 21 Jul 2026 13:27:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/book-reading-manager/</guid>
+      <description>자녀별 책·독서 기록·계획을 로컬에서 관리하는 Flutter 초기 MVP</description>
+    </item>
+    <item>
+      <title>해외 쇼핑몰 트렌드 분석 프로토타입</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/overseas-trend-analysis/</link>
+      <pubDate>Tue, 21 Jul 2026 13:26:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/overseas-trend-analysis/</guid>
+      <description>최소 메타데이터를 수집해 순위·리뷰 변화를 점수화하는 데이터 파이프라인 프로토타입</description>
+    </item>
+    <item>
+      <title>FreshPeach — .NET 8 &#43; Vue 개발 환경 실험</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/freshpeach-stack-spike/</link>
+      <pubDate>Tue, 21 Jul 2026 13:25:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/freshpeach-stack-spike/</guid>
+      <description>ASP.NET Core API와 Vue 프론트엔드의 분리 구성을 확인한 초기 기술 실험</description>
+    </item>
+    <item>
+      <title>콜센터 대응 프로세스 시스템</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/callcenter-process/</link>
+      <pubDate>Tue, 21 Jul 2026 13:24:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/callcenter-process/</guid>
+      <description>상담 절차를 그래프로 편집하고 상담사가 단계별로 따라가도록 만든 웹·모바일 프로토타입</description>
+    </item>
+    <item>
+      <title>PayLog — 결제 알림 기반 지출·정산 앱</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/paylog/</link>
+      <pubDate>Tue, 21 Jul 2026 13:23:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/paylog/</guid>
+      <description>Android 결제 알림을 거래로 변환하고 개인 지출과 그룹 정산을 관리하는 Flutter MVP</description>
+    </item>
+    <item>
+      <title>Memora — AI 학습 카드 앱</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/memora/</link>
+      <pubDate>Tue, 21 Jul 2026 13:22:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/memora/</guid>
+      <description>필기·PDF·텍스트를 학습 카드와 퀴즈로 변환하고 복습 일정을 관리하는 오프라인 우선 앱</description>
+    </item>
+    <item>
+      <title>AutoReel AI — 숏폼 영상 생성 파이프라인</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/</link>
+      <pubDate>Tue, 21 Jul 2026 13:21:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/</guid>
+      <description>트렌드 수집부터 대본·음성·영상 합성, 검수와 YouTube 게시까지 자동화한 Python MVP</description>
+    </item>
+    <item>
+      <title>사내 서버 상태 모니터링 시스템</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/server-monitoring/</link>
+      <pubDate>Tue, 21 Jul 2026 13:20:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/server-monitoring/</guid>
+      <description>분산된 서버 상태를 수집하고 장애 징후를 알림·대시보드로 확인하도록 만든 운영 지원 시스템</description>
     </item>
     <item>
       <title>About</title>
       <link>https://idiotspapa.github.io/GitBlog/about/</link>
-      <pubDate>Thu, 17 Jul 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 21 Jul 2026 09:00:00 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/about/</guid>
-      <description>&lt;p&gt;안녕하세요. 이 블로그는 제 개발 기록, 프로젝트, 공부 메모 등을 정리하는 공간입니다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;p&gt;C# / ASP.NET &lt;strong&gt;MVC4 → Core 3.1 → .NET 8&lt;/strong&gt; 환경에서 사내 웹·ERP성 시스템을 개발·운영하는 개발자입니다.&lt;/p&gt;
+&lt;p&gt;출장·교육 정산처럼 규칙이 많은 업무를 화면과 데이터로 옮기는 일을 해 왔고,&lt;br&gt;
+최근에는 Cursor·Claude 등 AI 코딩 도구로 React·Flutter·자동화 파이프라인을 실험합니다.&lt;br&gt;
+AI는 속도를 위해 쓰되 &lt;strong&gt;결과물을 검증&lt;/strong&gt;하고, &lt;strong&gt;사내 코드·데이터는 외부에 올리지 않는&lt;/strong&gt; 쪽을 기준으로 삼습니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hello</title>
-      <link>https://idiotspapa.github.io/GitBlog/posts/test/</link>
-      <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
-      <guid>https://idiotspapa.github.io/GitBlog/posts/test/</guid>
-      <description>&lt;p&gt;테스트 포스트입니다.&lt;/p&gt;</description>
+      <title>사내 ERP — 출장·교육 정산 시스템</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</link>
+      <pubDate>Tue, 21 Jul 2026 00:10:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</guid>
+      <description>출장·교육 신청/정산, Report, 기준정보 — 사내 ERP 웹 개발·운영 (익명)</description>
     </item>
     <item>
-      <title>Hello, Git 블로그!</title>
+      <title>Hugo에서 콘텐츠를 구분하는 방법</title>
+      <link>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</link>
+      <pubDate>Thu, 17 Jul 2025 00:39:49 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</guid>
+      <description>&lt;p&gt;Hugo는 &lt;code&gt;content&lt;/code&gt; 아래의 디렉터리를 기준으로 섹션을 구분한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;content/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── posts/       # 일반 글
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── notes/       # 짧은 학습 기록
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── projects/    # 프로젝트 포트폴리오
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;각 Markdown 파일의 front matter에는 제목·작성일·공개 여부를 넣는다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;+++&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;글 제목&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2025-07-17T00:00:00+09:00&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;draft&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;+++&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;작업 중인 글은 &lt;code&gt;draft = true&lt;/code&gt;로 두면 일반 빌드에서 제외된다. 로컬에서 초안을 함께 확인할 때만 아래처럼 실행한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo &#43; GitHub Pages로 개발 블로그 시작</title>
       <link>https://idiotspapa.github.io/GitBlog/posts/hello/</link>
       <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/posts/hello/</guid>
-      <description>&lt;p&gt;이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉&lt;br&gt;
-앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.&lt;/p&gt;
-&lt;p&gt;✅ 1. 프로젝트 목표
-Hugo + GitHub Pages로 정적 블로그 생성
-저장소: &lt;a href=&#34;https://github.com/IdiotsPapa/GitBlog&#34;&gt;https://github.com/IdiotsPapa/GitBlog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;🛠️ 2. 사용된 명령어 및 역할
-명령어	역할
-choco install hugo -confirm	Chocolatey로 Hugo 설치
-hugo version	설치된 Hugo 버전 확인
-hugo new site hugo-blog	새 Hugo 블로그 프로젝트 생성
-cd hugo-blog	생성된 폴더로 이동
-git init	Git 초기화
-git remote add origin &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&amp;hellip;	GitHub 원격 저장소 연결
-git submodule add &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;https://github.com/adityatelange/hugo-PaperMod&lt;/a&gt; themes/PaperMod	PaperMod 테마 추가
-hugo new posts/hello.md	새 블로그 글 생성
-hugo	정적 파일(public 폴더) 빌드
-git checkout &amp;ndash;orphan gh-pages	GitHub Pages용 빈 브랜치 생성
-git rm -rf .	gh-pages 브랜치의 모든 파일 삭제
-git add, git commit, git push	변경사항 커밋/푸시
-.github/workflows/gh-pages.yml 작성	GitHub Actions 자동 배포 설정
-git push origin main	Hugo 소스와 설정 푸시 (자동 배포 트리거)&lt;/p&gt;</description>
+      <description>Hugo와 GitHub Pages, PaperMod 테마로 정적 블로그를 구성한 기록</description>
     </item>
   </channel>
 </rss>

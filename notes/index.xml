@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Notes on IdiotsPapa&#39;s Dev Blog</title>
+    <title>노트 on IdiotsPapa&#39;s Dev Blog</title>
     <link>https://idiotspapa.github.io/GitBlog/notes/</link>
-    <description>Recent content in Notes on IdiotsPapa&#39;s Dev Blog</description>
-    <generator>Hugo -- 0.148.1</generator>
+    <description>Recent content in 노트 on IdiotsPapa&#39;s Dev Blog</description>
+    <generator>Hugo -- 0.164.0</generator>
     <language>ko</language>
     <lastBuildDate>Thu, 17 Jul 2025 00:39:49 +0900</lastBuildDate>
     <atom:link href="https://idiotspapa.github.io/GitBlog/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Today Learned Hugo</title>
+      <title>Hugo에서 콘텐츠를 구분하는 방법</title>
       <link>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</link>
       <pubDate>Thu, 17 Jul 2025 00:39:49 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</guid>
-      <description></description>
+      <description>&lt;p&gt;Hugo는 &lt;code&gt;content&lt;/code&gt; 아래의 디렉터리를 기준으로 섹션을 구분한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;content/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── posts/       # 일반 글
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── notes/       # 짧은 학습 기록
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── projects/    # 프로젝트 포트폴리오
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;각 Markdown 파일의 front matter에는 제목·작성일·공개 여부를 넣는다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;+++&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;글 제목&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2025-07-17T00:00:00+09:00&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;draft&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;+++&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;작업 중인 글은 &lt;code&gt;draft = true&lt;/code&gt;로 두면 일반 빌드에서 제외된다. 로컬에서 초안을 함께 확인할 때만 아래처럼 실행한다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

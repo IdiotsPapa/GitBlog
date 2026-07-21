@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>PayLog — 결제 알림 기반 지출·정산 앱 | IdiotsPapa&#39;s Dev Blog</title>
+<meta name="keywords" content="Flutter, Dart, Android, Kotlin">
+<meta name="description" content="Android 결제 알림을 거래로 변환하고 개인 지출과 그룹 정산을 관리하는 Flutter MVP">
+<meta name="author" content="IdiotsPapa">
+<link rel="canonical" href="https://idiotspapa.github.io/GitBlog/projects/paylog/">
+<link crossorigin="anonymous" href="/GitBlog/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://idiotspapa.github.io/GitBlog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://idiotspapa.github.io/GitBlog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://idiotspapa.github.io/GitBlog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://idiotspapa.github.io/GitBlog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://idiotspapa.github.io/GitBlog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://idiotspapa.github.io/GitBlog/projects/paylog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://idiotspapa.github.io/GitBlog/projects/paylog/">
+  <meta property="og:site_name" content="IdiotsPapa&#39;s Dev Blog">
+  <meta property="og:title" content="PayLog — 결제 알림 기반 지출·정산 앱">
+  <meta property="og:description" content="Android 결제 알림을 거래로 변환하고 개인 지출과 그룹 정산을 관리하는 Flutter MVP">
+  <meta property="og:locale" content="ko">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2026-07-21T13:23:00+09:00">
+    <meta property="article:modified_time" content="2026-07-21T13:23:00+09:00">
+    <meta property="article:tag" content="Flutter">
+    <meta property="article:tag" content="Dart">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Kotlin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PayLog — 결제 알림 기반 지출·정산 앱">
+<meta name="twitter:description" content="Android 결제 알림을 거래로 변환하고 개인 지출과 그룹 정산을 관리하는 Flutter MVP">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "프로젝트",
+      "item": "https://idiotspapa.github.io/GitBlog/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "PayLog — 결제 알림 기반 지출·정산 앱",
+      "item": "https://idiotspapa.github.io/GitBlog/projects/paylog/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "PayLog — 결제 알림 기반 지출·정산 앱",
+  "name": "PayLog — 결제 알림 기반 지출·정산 앱",
+  "description": "Android 결제 알림을 거래로 변환하고 개인 지출과 그룹 정산을 관리하는 Flutter MVP",
+  "keywords": [
+    "Flutter", "Dart", "Android", "Kotlin"
+  ],
+  "articleBody": "프로젝트 개요 카드 결제 알림을 자동으로 거래 내역으로 변환하고, 개인 지출·그룹 정산·월별 가계부를 관리하는 Flutter 앱입니다.\n작업 기간: 2026년 5월 27일 ~ 6월 11일 상태: Android 중심의 기능성 MVP 핵심: Flutter 앱과 Android 시스템 알림의 네이티브 연동 구현한 기능 홈·정산·가계부·설정 4개 탭 거래 수동 추가 개인/그룹 거래와 지출자·결제자 지정 월별 거래·총지출·받을 돈 표시 멤버·그룹 관리 거래에 사용 중인 멤버·그룹 삭제 방지 멤버별 잔액과 송금 방향 계산 월별·카테고리별 소비 집계 Android 결제 알림 자동 수집 승인 취소·거절 알림 제외 금액·가맹점·카드사 추출 일정 시간 내 중복 거래 방지 알림 접근 권한 확인과 설정 화면 이동 기술 구성 Flutter / Dart Provider / ChangeNotifier SharedPreferences Android Kotlin MethodChannel / EventChannel NotificationListenerService 앱이 꺼져 있을 때의 알림 처리 결제 알림은 Flutter 화면이 실행 중일 때만 발생하지 않습니다. 앱이 종료된 상태에서도 Android 서비스가 알림을 받을 수 있어야 했습니다.\nAndroid NotificationListenerService ├─ 앱 실행 중: EventChannel로 Flutter에 전달 └─ 앱 미실행: 네이티브 SharedPreferences 큐에 저장 ↓ 다음 앱 실행 시 읽고 거래로 변환 Flutter와 Android 네이티브 사이의 생명주기가 다르기 때문에, 이벤트 전달과 임시 저장을 분리했습니다.\n정산 방식 각 거래에 지출자와 실제 결제자를 기록해 멤버별 채권·채무를 계산합니다. 이후 채권자와 채무자의 잔액을 비교해 필요한 송금 목록으로 단순화합니다.\n현재는 한 거래를 여러 사람이 비율 또는 균등 분할하는 구조가 아니라, 단일 지출자·단일 결제자 기준입니다.\n개발하며 고민한 점 카드사마다 다른 알림 문구를 어떻게 정규화할지 승인 취소와 결제 거절을 거래에서 제외하는 방법 앱 비실행 중 알림을 유실하지 않는 방법 같은 거래가 반복 수신될 때 중복을 막는 기준 거래가 참조 중인 멤버·그룹의 삭제를 막아 데이터 일관성을 지키는 방법 현재 한계 Android만 결제 알림 자동 수집 지원 카드사별 실제 문구 변화에 취약한 휴리스틱 파서 거래 수정·삭제 UI 보완 필요 로그인·백업·동기화 없음 정식 배포와 폭넓은 실기기 검증 필요 데이터가 늘면 SharedPreferences 대신 로컬 DB 전환 필요 완성된 서비스로 포장하기보다, Flutter와 Android 네이티브 기능을 연결해 핵심 가설을 검증한 MVP로 기록합니다.\n",
+  "wordCount" : "294",
+  "inLanguage": "en",
+  "datePublished": "2026-07-21T13:23:00+09:00",
+  "dateModified": "2026-07-21T13:23:00+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "IdiotsPapa"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://idiotspapa.github.io/GitBlog/projects/paylog/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IdiotsPapa's Dev Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://idiotspapa.github.io/GitBlog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://idiotspapa.github.io/GitBlog/" accesskey="h" title="IdiotsPapa&#39;s Dev Blog (Alt + H)">IdiotsPapa&#39;s Dev Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/" title="홈">
+                    <span>홈</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/posts/" title="글">
+                    <span>글</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/notes/" title="노트">
+                    <span>노트</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/projects/" title="프로젝트">
+                    <span>프로젝트</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/about/" title="소개">
+                    <span>소개</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://idiotspapa.github.io/GitBlog/">홈</a>&nbsp;»&nbsp;<a href="https://idiotspapa.github.io/GitBlog/projects/">프로젝트</a></div>
+    <h1 class="post-title entry-hint-parent">
+      PayLog — 결제 알림 기반 지출·정산 앱
+    </h1>
+    <div class="post-meta"><span title='2026-07-21 13:23:00 +0900 +0900'>2026-07-21</span>&nbsp;·&nbsp;2 분&nbsp;·&nbsp;IdiotsPapa
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="프로젝트-개요">프로젝트 개요<a hidden class="anchor" aria-hidden="true" href="#프로젝트-개요">#</a></h2>
+<p>카드 결제 알림을 자동으로 거래 내역으로 변환하고, 개인 지출·그룹 정산·월별 가계부를 관리하는 Flutter 앱입니다.</p>
+<ul>
+<li>작업 기간: 2026년 5월 27일 ~ 6월 11일</li>
+<li>상태: Android 중심의 기능성 MVP</li>
+<li>핵심: Flutter 앱과 Android 시스템 알림의 네이티브 연동</li>
+</ul>
+<h2 id="구현한-기능">구현한 기능<a hidden class="anchor" aria-hidden="true" href="#구현한-기능">#</a></h2>
+<ul>
+<li>홈·정산·가계부·설정 4개 탭</li>
+<li>거래 수동 추가</li>
+<li>개인/그룹 거래와 지출자·결제자 지정</li>
+<li>월별 거래·총지출·받을 돈 표시</li>
+<li>멤버·그룹 관리</li>
+<li>거래에 사용 중인 멤버·그룹 삭제 방지</li>
+<li>멤버별 잔액과 송금 방향 계산</li>
+<li>월별·카테고리별 소비 집계</li>
+<li>Android 결제 알림 자동 수집</li>
+<li>승인 취소·거절 알림 제외</li>
+<li>금액·가맹점·카드사 추출</li>
+<li>일정 시간 내 중복 거래 방지</li>
+<li>알림 접근 권한 확인과 설정 화면 이동</li>
+</ul>
+<h2 id="기술-구성">기술 구성<a hidden class="anchor" aria-hidden="true" href="#기술-구성">#</a></h2>
+<ul>
+<li>Flutter / Dart</li>
+<li>Provider / ChangeNotifier</li>
+<li>SharedPreferences</li>
+<li>Android Kotlin</li>
+<li>MethodChannel / EventChannel</li>
+<li>NotificationListenerService</li>
+</ul>
+<h2 id="앱이-꺼져-있을-때의-알림-처리">앱이 꺼져 있을 때의 알림 처리<a hidden class="anchor" aria-hidden="true" href="#앱이-꺼져-있을-때의-알림-처리">#</a></h2>
+<p>결제 알림은 Flutter 화면이 실행 중일 때만 발생하지 않습니다. 앱이 종료된 상태에서도 Android 서비스가 알림을 받을 수 있어야 했습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Android NotificationListenerService
+</span></span><span class="line"><span class="cl">  ├─ 앱 실행 중: EventChannel로 Flutter에 전달
+</span></span><span class="line"><span class="cl">  └─ 앱 미실행: 네이티브 SharedPreferences 큐에 저장
+</span></span><span class="line"><span class="cl">                     ↓
+</span></span><span class="line"><span class="cl">                다음 앱 실행 시 읽고 거래로 변환
+</span></span></code></pre></div><p>Flutter와 Android 네이티브 사이의 생명주기가 다르기 때문에, 이벤트 전달과 임시 저장을 분리했습니다.</p>
+<h2 id="정산-방식">정산 방식<a hidden class="anchor" aria-hidden="true" href="#정산-방식">#</a></h2>
+<p>각 거래에 지출자와 실제 결제자를 기록해 멤버별 채권·채무를 계산합니다. 이후 채권자와 채무자의 잔액을 비교해 필요한 송금 목록으로 단순화합니다.</p>
+<p>현재는 한 거래를 여러 사람이 비율 또는 균등 분할하는 구조가 아니라, <strong>단일 지출자·단일 결제자 기준</strong>입니다.</p>
+<h2 id="개발하며-고민한-점">개발하며 고민한 점<a hidden class="anchor" aria-hidden="true" href="#개발하며-고민한-점">#</a></h2>
+<ul>
+<li>카드사마다 다른 알림 문구를 어떻게 정규화할지</li>
+<li>승인 취소와 결제 거절을 거래에서 제외하는 방법</li>
+<li>앱 비실행 중 알림을 유실하지 않는 방법</li>
+<li>같은 거래가 반복 수신될 때 중복을 막는 기준</li>
+<li>거래가 참조 중인 멤버·그룹의 삭제를 막아 데이터 일관성을 지키는 방법</li>
+</ul>
+<h2 id="현재-한계">현재 한계<a hidden class="anchor" aria-hidden="true" href="#현재-한계">#</a></h2>
+<ul>
+<li>Android만 결제 알림 자동 수집 지원</li>
+<li>카드사별 실제 문구 변화에 취약한 휴리스틱 파서</li>
+<li>거래 수정·삭제 UI 보완 필요</li>
+<li>로그인·백업·동기화 없음</li>
+<li>정식 배포와 폭넓은 실기기 검증 필요</li>
+<li>데이터가 늘면 SharedPreferences 대신 로컬 DB 전환 필요</li>
+</ul>
+<p>완성된 서비스로 포장하기보다, <strong>Flutter와 Android 네이티브 기능을 연결해 핵심 가설을 검증한 MVP</strong>로 기록합니다.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/flutter/">Flutter</a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/dart/">Dart</a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/android/">Android</a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/kotlin/">Kotlin</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://idiotspapa.github.io/GitBlog/projects/callcenter-process/">
+    <span class="title">« 이전 페이지</span>
+    <br>
+    <span>콜센터 대응 프로세스 시스템</span>
+  </a>
+  <a class="next" href="https://idiotspapa.github.io/GitBlog/projects/memora/">
+    <span class="title">다음 페이지 »</span>
+    <br>
+    <span>Memora — AI 학습 카드 앱</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://idiotspapa.github.io/GitBlog/">IdiotsPapa&#39;s Dev Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '복사';
+
+        function copyingDone() {
+            copybutton.innerHTML = '복사 완료!';
+            setTimeout(() => {
+                copybutton.innerHTML = '복사';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on IdiotsPapa&#39;s Dev Blog</title>
+    <link>https://idiotspapa.github.io/GitBlog/tags/python/</link>
+    <description>Recent content in Python on IdiotsPapa&#39;s Dev Blog</description>
+    <generator>Hugo -- 0.164.0</generator>
+    <language>ko</language>
+    <lastBuildDate>Tue, 21 Jul 2026 13:26:00 +0900</lastBuildDate>
+    <atom:link href="https://idiotspapa.github.io/GitBlog/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>해외 쇼핑몰 트렌드 분석 프로토타입</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/overseas-trend-analysis/</link>
+      <pubDate>Tue, 21 Jul 2026 13:26:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/overseas-trend-analysis/</guid>
+      <description>최소 메타데이터를 수집해 순위·리뷰 변화를 점수화하는 데이터 파이프라인 프로토타입</description>
+    </item>
+    <item>
+      <title>AutoReel AI — 숏폼 영상 생성 파이프라인</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/</link>
+      <pubDate>Tue, 21 Jul 2026 13:21:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/</guid>
+      <description>트렌드 수집부터 대본·음성·영상 합성, 검수와 YouTube 게시까지 자동화한 Python MVP</description>
+    </item>
+  </channel>
+</rss>

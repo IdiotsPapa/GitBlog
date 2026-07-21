@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>사내 서버 상태 모니터링 시스템 | IdiotsPapa&#39;s Dev Blog</title>
+<meta name="keywords" content="C#, ASP.NET Core, Monitoring, Operations">
+<meta name="description" content="분산된 서버 상태를 수집하고 장애 징후를 알림·대시보드로 확인하도록 만든 운영 지원 시스템">
+<meta name="author" content="IdiotsPapa">
+<link rel="canonical" href="https://idiotspapa.github.io/GitBlog/projects/server-monitoring/">
+<link crossorigin="anonymous" href="/GitBlog/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://idiotspapa.github.io/GitBlog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://idiotspapa.github.io/GitBlog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://idiotspapa.github.io/GitBlog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://idiotspapa.github.io/GitBlog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://idiotspapa.github.io/GitBlog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://idiotspapa.github.io/GitBlog/projects/server-monitoring/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://idiotspapa.github.io/GitBlog/projects/server-monitoring/">
+  <meta property="og:site_name" content="IdiotsPapa&#39;s Dev Blog">
+  <meta property="og:title" content="사내 서버 상태 모니터링 시스템">
+  <meta property="og:description" content="분산된 서버 상태를 수집하고 장애 징후를 알림·대시보드로 확인하도록 만든 운영 지원 시스템">
+  <meta property="og:locale" content="ko">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2026-07-21T13:20:00+09:00">
+    <meta property="article:modified_time" content="2026-07-21T13:20:00+09:00">
+    <meta property="article:tag" content="C#">
+    <meta property="article:tag" content="ASP.NET Core">
+    <meta property="article:tag" content="Monitoring">
+    <meta property="article:tag" content="Operations">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="사내 서버 상태 모니터링 시스템">
+<meta name="twitter:description" content="분산된 서버 상태를 수집하고 장애 징후를 알림·대시보드로 확인하도록 만든 운영 지원 시스템">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "프로젝트",
+      "item": "https://idiotspapa.github.io/GitBlog/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "사내 서버 상태 모니터링 시스템",
+      "item": "https://idiotspapa.github.io/GitBlog/projects/server-monitoring/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "사내 서버 상태 모니터링 시스템",
+  "name": "사내 서버 상태 모니터링 시스템",
+  "description": "분산된 서버 상태를 수집하고 장애 징후를 알림·대시보드로 확인하도록 만든 운영 지원 시스템",
+  "keywords": [
+    "C#", "ASP.NET Core", "Monitoring", "Operations"
+  ],
+  "articleBody": "프로젝트 개요 여러 서버와 데이터 연계 작업의 상태를 한곳에서 확인하기 위한 사내 운영 지원 시스템입니다.\n각 서버에 설치되는 백그라운드 에이전트가 상태를 수집하고, 중앙 웹 시스템이 이를 저장·시각화하는 구조로 구성했습니다. 회사·서버·인프라를 식별할 수 있는 정보는 보안을 위해 공개하지 않습니다.\n작업 기간: 2021년 5월 ~ 2022년 8월 확인 가능 형태: 에이전트 + 중앙 API + 관리자 웹 역할: 기능 개발 및 운영·유지보수 해결하려던 문제 서버 장애는 서비스가 완전히 멈춘 뒤 발견하는 것보다, 자원 사용량 증가나 연계 적체 같은 선행 신호를 일찍 알아채는 것이 중요합니다.\n기존에는 서버마다 직접 접속하거나 담당자가 별도로 상태를 확인해야 했습니다. 이를 줄이기 위해 다음 흐름을 만들었습니다.\n서버별 Agent → 상태·운영 지표 수집 → 중앙 API 및 저장소 → 웹 대시보드 → 장애·복구 알림 구현 범위 CPU·메모리·디스크 사용량 수집과 임계치 경보 프로세스 및 Windows 서비스 상태 확인 데이터베이스 연결 상태와 응답 시간 점검 장기 실행 작업·적체량 등 운영 지표 조회 이메일·문자 기반 장애 및 복구 알림 서버·점검 항목·담당자·알림 정책 관리 기간별 상태와 응답 시간을 확인하는 차트·목록 제한된 조건에서 프로세스·서비스 재시작 기술 구성 C# / .NET Core ASP.NET Core 기반 중앙 웹·API Windows 백그라운드 서비스 Vue 기반 관리자 화면 관계형 데이터베이스 Windows 시스템 관리 API 개발하며 중요하게 본 점 경보는 많다고 좋은 것이 아니다 같은 장애가 반복 감지될 때 알림이 계속 쌓이면 담당자는 오히려 중요한 신호를 놓칩니다. 장애와 복구 상태를 구분하고, 중복·오탐을 줄이는 것이 단순 수집보다 중요했습니다.\n자동 복구에는 안전장치가 필요하다 서비스 재시작은 편리하지만 잘못 실행하면 장애를 키울 수 있습니다. 실행 조건, 대상 제한, 이력 기록처럼 오작동을 막는 제약이 필요했습니다.\n모니터링 자체도 운영 대상이다 타이머 중복 실행, 비동기 예외, 연결 수명, 높은 Windows 권한 등 모니터링 시스템 자체의 안정성도 함께 관리해야 했습니다.\n돌아보며 이 프로젝트를 통해 운영·유지보수는 단순히 장애가 발생했을 때 고치는 일이 아니라, 문제를 빨리 발견할 수 있는 구조를 만드는 일이라는 점을 배웠습니다.\n현재 기준으로는 지원이 종료된 런타임과 오래된 프론트엔드 의존성 등 기술 부채가 있습니다. 다시 고도화한다면 최신 .NET LTS 전환, 최소 권한 적용, 구조화 로그, 경보 중복 억제 정책부터 정리할 계획입니다.\n공개 범위 내부 서버명, IP, 접속 정보, 데이터 구조, 회사·고객 식별 정보와 실제 화면은 포함하지 않았습니다.\n",
+  "wordCount" : "328",
+  "inLanguage": "en",
+  "datePublished": "2026-07-21T13:20:00+09:00",
+  "dateModified": "2026-07-21T13:20:00+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "IdiotsPapa"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://idiotspapa.github.io/GitBlog/projects/server-monitoring/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IdiotsPapa's Dev Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://idiotspapa.github.io/GitBlog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://idiotspapa.github.io/GitBlog/" accesskey="h" title="IdiotsPapa&#39;s Dev Blog (Alt + H)">IdiotsPapa&#39;s Dev Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/" title="홈">
+                    <span>홈</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/posts/" title="글">
+                    <span>글</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/notes/" title="노트">
+                    <span>노트</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/projects/" title="프로젝트">
+                    <span>프로젝트</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://idiotspapa.github.io/GitBlog/about/" title="소개">
+                    <span>소개</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://idiotspapa.github.io/GitBlog/">홈</a>&nbsp;»&nbsp;<a href="https://idiotspapa.github.io/GitBlog/projects/">프로젝트</a></div>
+    <h1 class="post-title entry-hint-parent">
+      사내 서버 상태 모니터링 시스템
+    </h1>
+    <div class="post-meta"><span title='2026-07-21 13:20:00 +0900 +0900'>2026-07-21</span>&nbsp;·&nbsp;2 분&nbsp;·&nbsp;IdiotsPapa
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="프로젝트-개요">프로젝트 개요<a hidden class="anchor" aria-hidden="true" href="#프로젝트-개요">#</a></h2>
+<p>여러 서버와 데이터 연계 작업의 상태를 한곳에서 확인하기 위한 <strong>사내 운영 지원 시스템</strong>입니다.</p>
+<p>각 서버에 설치되는 백그라운드 에이전트가 상태를 수집하고, 중앙 웹 시스템이 이를 저장·시각화하는 구조로 구성했습니다. 회사·서버·인프라를 식별할 수 있는 정보는 보안을 위해 공개하지 않습니다.</p>
+<ul>
+<li>작업 기간: 2021년 5월 ~ 2022년 8월 확인 가능</li>
+<li>형태: 에이전트 + 중앙 API + 관리자 웹</li>
+<li>역할: 기능 개발 및 운영·유지보수</li>
+</ul>
+<h2 id="해결하려던-문제">해결하려던 문제<a hidden class="anchor" aria-hidden="true" href="#해결하려던-문제">#</a></h2>
+<p>서버 장애는 서비스가 완전히 멈춘 뒤 발견하는 것보다, 자원 사용량 증가나 연계 적체 같은 <strong>선행 신호</strong>를 일찍 알아채는 것이 중요합니다.</p>
+<p>기존에는 서버마다 직접 접속하거나 담당자가 별도로 상태를 확인해야 했습니다. 이를 줄이기 위해 다음 흐름을 만들었습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">서버별 Agent
+</span></span><span class="line"><span class="cl">  → 상태·운영 지표 수집
+</span></span><span class="line"><span class="cl">  → 중앙 API 및 저장소
+</span></span><span class="line"><span class="cl">  → 웹 대시보드
+</span></span><span class="line"><span class="cl">  → 장애·복구 알림
+</span></span></code></pre></div><h2 id="구현-범위">구현 범위<a hidden class="anchor" aria-hidden="true" href="#구현-범위">#</a></h2>
+<ul>
+<li>CPU·메모리·디스크 사용량 수집과 임계치 경보</li>
+<li>프로세스 및 Windows 서비스 상태 확인</li>
+<li>데이터베이스 연결 상태와 응답 시간 점검</li>
+<li>장기 실행 작업·적체량 등 운영 지표 조회</li>
+<li>이메일·문자 기반 장애 및 복구 알림</li>
+<li>서버·점검 항목·담당자·알림 정책 관리</li>
+<li>기간별 상태와 응답 시간을 확인하는 차트·목록</li>
+<li>제한된 조건에서 프로세스·서비스 재시작</li>
+</ul>
+<h2 id="기술-구성">기술 구성<a hidden class="anchor" aria-hidden="true" href="#기술-구성">#</a></h2>
+<ul>
+<li>C# / .NET Core</li>
+<li>ASP.NET Core 기반 중앙 웹·API</li>
+<li>Windows 백그라운드 서비스</li>
+<li>Vue 기반 관리자 화면</li>
+<li>관계형 데이터베이스</li>
+<li>Windows 시스템 관리 API</li>
+</ul>
+<h2 id="개발하며-중요하게-본-점">개발하며 중요하게 본 점<a hidden class="anchor" aria-hidden="true" href="#개발하며-중요하게-본-점">#</a></h2>
+<h3 id="경보는-많다고-좋은-것이-아니다">경보는 많다고 좋은 것이 아니다<a hidden class="anchor" aria-hidden="true" href="#경보는-많다고-좋은-것이-아니다">#</a></h3>
+<p>같은 장애가 반복 감지될 때 알림이 계속 쌓이면 담당자는 오히려 중요한 신호를 놓칩니다. 장애와 복구 상태를 구분하고, 중복·오탐을 줄이는 것이 단순 수집보다 중요했습니다.</p>
+<h3 id="자동-복구에는-안전장치가-필요하다">자동 복구에는 안전장치가 필요하다<a hidden class="anchor" aria-hidden="true" href="#자동-복구에는-안전장치가-필요하다">#</a></h3>
+<p>서비스 재시작은 편리하지만 잘못 실행하면 장애를 키울 수 있습니다. 실행 조건, 대상 제한, 이력 기록처럼 <strong>오작동을 막는 제약</strong>이 필요했습니다.</p>
+<h3 id="모니터링-자체도-운영-대상이다">모니터링 자체도 운영 대상이다<a hidden class="anchor" aria-hidden="true" href="#모니터링-자체도-운영-대상이다">#</a></h3>
+<p>타이머 중복 실행, 비동기 예외, 연결 수명, 높은 Windows 권한 등 모니터링 시스템 자체의 안정성도 함께 관리해야 했습니다.</p>
+<h2 id="돌아보며">돌아보며<a hidden class="anchor" aria-hidden="true" href="#돌아보며">#</a></h2>
+<p>이 프로젝트를 통해 운영·유지보수는 단순히 장애가 발생했을 때 고치는 일이 아니라, <strong>문제를 빨리 발견할 수 있는 구조를 만드는 일</strong>이라는 점을 배웠습니다.</p>
+<p>현재 기준으로는 지원이 종료된 런타임과 오래된 프론트엔드 의존성 등 기술 부채가 있습니다. 다시 고도화한다면 최신 .NET LTS 전환, 최소 권한 적용, 구조화 로그, 경보 중복 억제 정책부터 정리할 계획입니다.</p>
+<h2 id="공개-범위">공개 범위<a hidden class="anchor" aria-hidden="true" href="#공개-범위">#</a></h2>
+<p>내부 서버명, IP, 접속 정보, 데이터 구조, 회사·고객 식별 정보와 실제 화면은 포함하지 않았습니다.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/c%23/">C#</a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/asp.net-core/">ASP.NET Core</a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/monitoring/">Monitoring</a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/tags/operations/">Operations</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/">
+    <span class="title">« 이전 페이지</span>
+    <br>
+    <span>AutoReel AI — 숏폼 영상 생성 파이프라인</span>
+  </a>
+  <a class="next" href="https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/">
+    <span class="title">다음 페이지 »</span>
+    <br>
+    <span>사내 ERP — 출장·교육 정산 시스템</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://idiotspapa.github.io/GitBlog/">IdiotsPapa&#39;s Dev Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '복사';
+
+        function copyingDone() {
+            copybutton.innerHTML = '복사 완료!';
+            setTimeout(() => {
+                copybutton.innerHTML = '복사';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

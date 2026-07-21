@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Automation on IdiotsPapa&#39;s Dev Blog</title>
+    <link>https://idiotspapa.github.io/GitBlog/tags/automation/</link>
+    <description>Recent content in Automation on IdiotsPapa&#39;s Dev Blog</description>
+    <generator>Hugo -- 0.164.0</generator>
+    <language>ko</language>
+    <lastBuildDate>Tue, 21 Jul 2026 13:21:00 +0900</lastBuildDate>
+    <atom:link href="https://idiotspapa.github.io/GitBlog/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AutoReel AI — 숏폼 영상 생성 파이프라인</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/</link>
+      <pubDate>Tue, 21 Jul 2026 13:21:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/</guid>
+      <description>트렌드 수집부터 대본·음성·영상 합성, 검수와 YouTube 게시까지 자동화한 Python MVP</description>
+    </item>
+  </channel>
+</rss>

@@ -1,46 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on IdiotsPapa&#39;s Dev Blog</title>
+    <title>글 on IdiotsPapa&#39;s Dev Blog</title>
     <link>https://idiotspapa.github.io/GitBlog/posts/</link>
-    <description>Recent content in Posts on IdiotsPapa&#39;s Dev Blog</description>
-    <generator>Hugo -- 0.148.1</generator>
+    <description>Recent content in 글 on IdiotsPapa&#39;s Dev Blog</description>
+    <generator>Hugo -- 0.164.0</generator>
     <language>ko</language>
     <lastBuildDate>Wed, 16 Jul 2025 22:00:00 +0900</lastBuildDate>
     <atom:link href="https://idiotspapa.github.io/GitBlog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello</title>
-      <link>https://idiotspapa.github.io/GitBlog/posts/test/</link>
-      <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
-      <guid>https://idiotspapa.github.io/GitBlog/posts/test/</guid>
-      <description>&lt;p&gt;테스트 포스트입니다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hello, Git 블로그!</title>
+      <title>Hugo &#43; GitHub Pages로 개발 블로그 시작</title>
       <link>https://idiotspapa.github.io/GitBlog/posts/hello/</link>
       <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/posts/hello/</guid>
-      <description>&lt;p&gt;이것은 Hugo + GitHub Pages로 만든 첫 번째 포스트입니다 🎉&lt;br&gt;
-앞으로 개발 기록, 팁, 문서 등을 여기에 남길 예정입니다.&lt;/p&gt;
-&lt;p&gt;✅ 1. 프로젝트 목표
-Hugo + GitHub Pages로 정적 블로그 생성
-저장소: &lt;a href=&#34;https://github.com/IdiotsPapa/GitBlog&#34;&gt;https://github.com/IdiotsPapa/GitBlog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;🛠️ 2. 사용된 명령어 및 역할
-명령어	역할
-choco install hugo -confirm	Chocolatey로 Hugo 설치
-hugo version	설치된 Hugo 버전 확인
-hugo new site hugo-blog	새 Hugo 블로그 프로젝트 생성
-cd hugo-blog	생성된 폴더로 이동
-git init	Git 초기화
-git remote add origin &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&amp;hellip;	GitHub 원격 저장소 연결
-git submodule add &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;https://github.com/adityatelange/hugo-PaperMod&lt;/a&gt; themes/PaperMod	PaperMod 테마 추가
-hugo new posts/hello.md	새 블로그 글 생성
-hugo	정적 파일(public 폴더) 빌드
-git checkout &amp;ndash;orphan gh-pages	GitHub Pages용 빈 브랜치 생성
-git rm -rf .	gh-pages 브랜치의 모든 파일 삭제
-git add, git commit, git push	변경사항 커밋/푸시
-.github/workflows/gh-pages.yml 작성	GitHub Actions 자동 배포 설정
-git push origin main	Hugo 소스와 설정 푸시 (자동 배포 트리거)&lt;/p&gt;</description>
+      <description>Hugo와 GitHub Pages, PaperMod 테마로 정적 블로그를 구성한 기록</description>
     </item>
   </channel>
 </rss>

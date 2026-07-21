@@ -4,15 +4,211 @@
     <title>Tags on IdiotsPapa&#39;s Dev Blog</title>
     <link>https://idiotspapa.github.io/GitBlog/tags/</link>
     <description>Recent content in Tags on IdiotsPapa&#39;s Dev Blog</description>
-    <generator>Hugo -- 0.148.1</generator>
+    <generator>Hugo -- 0.164.0</generator>
     <language>ko</language>
-    <lastBuildDate>Wed, 16 Jul 2025 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:28:00 +0900</lastBuildDate>
     <atom:link href="https://idiotspapa.github.io/GitBlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.NET 8</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/.net-8/</link>
+      <pubDate>Tue, 21 Jul 2026 13:28:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/.net-8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C#</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/c%23/</link>
+      <pubDate>Tue, 21 Jul 2026 13:28:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/c%23/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Legacy Modernization</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/legacy-modernization/</link>
+      <pubDate>Tue, 21 Jul 2026 13:28:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/legacy-modernization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/react/</link>
+      <pubDate>Tue, 21 Jul 2026 13:28:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSV</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/csv/</link>
+      <pubDate>Tue, 21 Jul 2026 13:27:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/csv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dart</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/dart/</link>
+      <pubDate>Tue, 21 Jul 2026 13:27:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/dart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flutter</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/flutter/</link>
+      <pubDate>Tue, 21 Jul 2026 13:27:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/flutter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hive</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/hive/</link>
+      <pubDate>Tue, 21 Jul 2026 13:27:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/hive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FastAPI</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/fastapi/</link>
+      <pubDate>Tue, 21 Jul 2026 13:26:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/fastapi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/postgresql/</link>
+      <pubDate>Tue, 21 Jul 2026 13:26:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/python/</link>
+      <pubDate>Tue, 21 Jul 2026 13:26:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ASP.NET Core</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/asp.net-core/</link>
+      <pubDate>Tue, 21 Jul 2026 13:25:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/asp.net-core/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/typescript/</link>
+      <pubDate>Tue, 21 Jul 2026 13:25:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vue</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/vue/</link>
+      <pubDate>Tue, 21 Jul 2026 13:25:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/vue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node.js</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/node.js/</link>
+      <pubDate>Tue, 21 Jul 2026 13:24:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/node.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React Native</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/react-native/</link>
+      <pubDate>Tue, 21 Jul 2026 13:24:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/react-native/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/android/</link>
+      <pubDate>Tue, 21 Jul 2026 13:23:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/android/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kotlin</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/kotlin/</link>
+      <pubDate>Tue, 21 Jul 2026 13:23:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/kotlin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/claude/</link>
+      <pubDate>Tue, 21 Jul 2026 13:22:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Expo</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/expo/</link>
+      <pubDate>Tue, 21 Jul 2026 13:22:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/expo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Agent</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/ai-agent/</link>
+      <pubDate>Tue, 21 Jul 2026 13:21:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/ai-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/automation/</link>
+      <pubDate>Tue, 21 Jul 2026 13:21:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/monitoring/</link>
+      <pubDate>Tue, 21 Jul 2026 13:20:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operations</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/operations/</link>
+      <pubDate>Tue, 21 Jul 2026 13:20:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/operations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ASP.NET</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/asp.net/</link>
+      <pubDate>Tue, 21 Jul 2026 00:10:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/asp.net/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ERP</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/erp/</link>
+      <pubDate>Tue, 21 Jul 2026 00:10:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/erp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MSSQL</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/mssql/</link>
+      <pubDate>Tue, 21 Jul 2026 00:10:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/mssql/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Git</title>
       <link>https://idiotspapa.github.io/GitBlog/tags/git/</link>
       <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://idiotspapa.github.io/GitBlog/tags/hugo/</link>
+      <pubDate>Wed, 16 Jul 2025 22:00:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
