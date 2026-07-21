@@ -2,17 +2,39 @@ baseURL = "https://idiotspapa.github.io/GitBlog/"
 title = "IdiotsPapa's Dev Blog"
 theme = "PaperMod"
 languageCode = "ko"
-[pagination]
-  pagerSize = 5
 enableRobotsTXT = true
+summaryLength = 40
+
+[pagination]
+  pagerSize = 10
 
 [params]
   author = "IdiotsPapa"
+  description = "ASP.NET / .NET 사내 시스템 개발·운영과 AI 도구 실험 기록"
   defaultTheme = "auto"
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowFullTextinRSS = false
   comments = false
+  disableSpecial1stPost = false
+  hideFooter = false
+  DateFormat = "2006-01-02"
+
+  [params.homeInfoParams]
+    Title = "IdiotsPapa"
+    Content = """
+C# / ASP.NET **MVC4 → Core 3.1 → .NET 8**으로 사내 웹·ERP를 개발·운영합니다.  
+Cursor·Claude로 React·Flutter 등을 실험하되, **결과물을 검증**하고 **사내 데이터는 밖으로 내지 않는** 쪽을 기준으로 남깁니다.
+
+→ [프로젝트](/projects/) · [소개](/about/)
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/IdiotsPapa"
 
 [menu]
   [[menu.main]]
@@ -21,7 +43,7 @@ enableRobotsTXT = true
     weight = 1
 
   [[menu.main]]
-    name = "글 목록"
+    name = "글"
     url = "/posts/"
     weight = 2
 
@@ -40,3 +62,11 @@ enableRobotsTXT = true
     url = "/about/"
     weight = 5
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = false
+    noClasses = false
+    style = "monokai"
