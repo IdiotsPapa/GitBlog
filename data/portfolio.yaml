@@ -7,7 +7,7 @@ profile:
   summary: |
     C# / ASP.NET MVC4부터 Core 3.1, .NET 8까지 사내 웹·ERP성 시스템을 개발하고 운영해 왔습니다.
     출장 정산, Ticket·제안관리, 서버 모니터링, 생산현장 레거시 유지보수와 웹 전환을 경험했고,
-    Cursor·Claude 등 AI 도구로 React·Flutter·자동화 파이프라인을 실험하고 있습니다.
+    Cursor·Claude 등 AI 도구로 React·Flutter·자동화 파이프라인을 활용하고 있습니다.
   stack_line: "MVC4 → Core 3.1 → .NET 8"
 
 experience:
@@ -42,7 +42,7 @@ skills:
   - group: "AI & Automation"
     items:
       - "Cursor · Claude · OpenAI"
-      - "Python 파이프라인 · AI 에이전트 실험"
+      - "Python 파이프라인 · AI 에이전트 활용"
   - group: "Operations"
     items:
       - "서버 모니터링 · 장애 징후 알림"

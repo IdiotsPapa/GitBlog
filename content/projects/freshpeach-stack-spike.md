@@ -1,11 +1,11 @@
 +++
 date = '2026-07-21T13:25:00+09:00'
 draft = false
-title = 'FreshPeach — .NET 8 + Vue 개발 환경 실험'
+title = 'FreshPeach — .NET 8 + Vue 개발 환경 검증'
 tags = ['.NET 8', 'ASP.NET Core', 'Vue', 'TypeScript']
-summary = 'ASP.NET Core API와 Vue 프론트엔드의 분리 구성을 확인한 초기 기술 실험'
+summary = 'ASP.NET Core API와 Vue 프론트엔드의 분리 구성을 확인한 초기 기술 검증'
 period = '2026'
-role = '기술 실험'
+role = '기술 검증'
 featured = false
 order = 12
 category = 'web'
