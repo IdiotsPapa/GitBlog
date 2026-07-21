@@ -6,8 +6,8 @@ tags = ['Python', 'AI Agent', 'Claude', 'Automation']
 summary = '트렌드 수집부터 대본·음성·영상 합성, 검수와 YouTube 게시까지 자동화한 Python MVP'
 period = '2026.03 — 04'
 role = '설계·구현'
-featured = true
-order = 4
+featured = false
+order = 6
 category = 'ai'
 +++
 

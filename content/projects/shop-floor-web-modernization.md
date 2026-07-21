@@ -7,7 +7,7 @@ summary = '장기간 운영된 설치형 현장 시스템을 분석하고 .NET 8
 period = '2019 — 2026'
 role = '유지보수·웹 전환 PoC'
 featured = true
-order = 3
+order = 5
 category = 'work'
 +++
 

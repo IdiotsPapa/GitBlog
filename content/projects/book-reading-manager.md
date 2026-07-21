@@ -7,7 +7,7 @@ summary = '자녀별 책·독서 기록·계획을 로컬에서 관리하는 Flu
 period = '2025.10 — 2026.03'
 role = '개발'
 featured = false
-order = 9
+order = 11
 category = 'mobile'
 +++
 

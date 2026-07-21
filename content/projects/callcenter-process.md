@@ -7,7 +7,7 @@ summary = '상담 절차를 그래프로 편집하고 상담사가 단계별로 
 period = '2026.04 — 05'
 role = '프로토타입'
 featured = false
-order = 7
+order = 9
 category = 'web'
 +++
 

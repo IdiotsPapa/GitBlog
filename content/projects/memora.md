@@ -7,7 +7,7 @@ summary = '필기·PDF·텍스트를 학습 카드와 퀴즈로 변환하고 복
 period = '2026.05 — 07'
 role = '개발'
 featured = false
-order = 5
+order = 7
 category = 'mobile'
 +++
 

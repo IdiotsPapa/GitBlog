@@ -7,7 +7,7 @@ summary = 'ASP.NET Core API와 Vue 프론트엔드의 분리 구성을 확인한
 period = '2026'
 role = '기술 실험'
 featured = false
-order = 10
+order = 12
 category = 'web'
 +++
 

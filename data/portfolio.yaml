@@ -6,13 +6,13 @@ profile:
   location: "대구"
   summary: |
     C# / ASP.NET MVC4부터 Core 3.1, .NET 8까지 사내 웹·ERP성 시스템을 개발하고 운영해 왔습니다.
-    출장·교육 정산, Ticket·제안관리 시스템, 서버 모니터링, 생산현장 레거시 유지보수와 웹 전환을 경험했고,
+    출장 정산, Ticket·제안관리, 서버 모니터링, 생산현장 레거시 유지보수와 웹 전환을 경험했고,
     Cursor·Claude 등 AI 도구로 React·Flutter·자동화 파이프라인을 실험하고 있습니다.
   stack_line: "MVC4 → Core 3.1 → .NET 8"
 
 experience:
   - period: "2019.07 — 현재"
-    company: "제조·ERP (익명)"
+    company: "(주)새암정보"
     role: "사내 웹·ERP 개발·운영"
     highlights:
       - "출장 정산 시스템 개발 및 유지보수 (2025 — 현재)"
@@ -21,7 +21,7 @@ experience:
       - "분산 서버 상태 모니터링 시스템 개발·운영"
       - "생산현장 단말 시스템 유지보수 및 .NET 8·React 웹 전환 PoC"
   - period: "2016 — 2019.07"
-    company: "미래소프트웨어"
+    company: "(주)미래소프트웨어"
     role: "스마트팩토리 개발"
     highlights:
       - "정부 지원 스마트팩토리 구축 사업 수행"
@@ -32,11 +32,12 @@ skills:
   - group: "Backend & Data"
     items:
       - "C# / ASP.NET MVC4 · Core 3.1 · .NET 8"
-      - "MSSQL · PostgreSQL"
-      - "REST API · 사내 ERP·결재 연동"
+      - "MSSQL · Oracle · PostgreSQL"
+      - "REST API · 사내 ERP·결재 연동 · SAP RFC"
   - group: "Frontend & Mobile"
     items:
       - "React · Vue · TypeScript"
+      - "DevExpress · Bootstrap · jQuery"
       - "Flutter · React Native · Expo"
   - group: "AI & Automation"
     items:
@@ -46,13 +47,13 @@ skills:
     items:
       - "서버 모니터링 · 장애 징후 알림"
       - "레거시 분석 · 점진적 고도화"
-      - "사내 데이터 비반출 · 결과 검증"
+      - "사내 코드·데이터 비반출 · 결과 검증"
 
 principles:
   - title: "AI 결과는 직접 검증"
     text: "생성된 코드와 데이터는 동작·보안·업무 규칙 기준으로 확인한 뒤 반영합니다."
   - title: "사내 데이터는 외부에 올리지 않음"
-    text: "현업 프로젝트는 익명 처리하고, 코드·식별자·내부 URL은 공개하지 않습니다."
+    text: "회사명 외에 내부 코드·식별자·URL·계정 정보는 공개하지 않습니다."
   - title: "레거시는 한 번에 갈아엎지 않음"
     text: "운영 중인 시스템은 분석·유지보수 후 점진적으로 전환 가능한 형태를 찾습니다."
 
