@@ -148,9 +148,10 @@ body.portfolio-site .top-link {
 }
 
 .pf-title--hero {
-  font-size: clamp(2.75rem, 8vw, 5.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 .pf-subtitle {
