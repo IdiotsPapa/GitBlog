@@ -83,11 +83,11 @@
 AI가 만든 결과물은 직접 검증하고, 사내 코드와 데이터는 외부에 올리지 않습니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>사내 ERP — 출장·교육 정산 시스템</title>
+      <title>출장 정산 시스템</title>
       <link>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</link>
       <pubDate>Tue, 21 Jul 2026 00:10:00 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</guid>
-      <description>출장·교육 신청/정산, Report, 기준정보 — 사내 ERP 웹 개발·운영 (익명)</description>
+      <description>출장·교육 신청/정산, Report, 기준정보 — 사내 웹 개발·운영 (익명)</description>
     </item>
     <item>
       <title>Hugo에서 콘텐츠를 구분하는 방법</title>

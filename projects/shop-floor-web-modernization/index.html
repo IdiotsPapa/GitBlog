@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>생산현장 단말 시스템과 웹 전환 | 장현우 — Portfolio</title>
-<meta name="keywords" content="C#, .NET 8, React, Legacy Modernization">
+<meta name="keywords" content="C#, DevExpress, .NET 8, React, Legacy Modernization">
 <meta name="description" content="장기간 운영된 설치형 현장 시스템을 분석하고 .NET 8·React 기반 웹으로 점진 전환한 사례">
 <meta name="author" content="장현우">
 <link rel="canonical" href="https://idiotspapa.github.io/GitBlog/projects/shop-floor-web-modernization/">
@@ -43,6 +43,7 @@
     <meta property="article:published_time" content="2026-07-21T13:28:00+09:00">
     <meta property="article:modified_time" content="2026-07-21T13:28:00+09:00">
     <meta property="article:tag" content="C#">
+    <meta property="article:tag" content="DevExpress">
     <meta property="article:tag" content=".NET 8">
     <meta property="article:tag" content="React">
     <meta property="article:tag" content="Legacy Modernization">
@@ -79,7 +80,7 @@
   "name": "생산현장 단말 시스템과 웹 전환",
   "description": "장기간 운영된 설치형 현장 시스템을 분석하고 .NET 8·React 기반 웹으로 점진 전환한 사례",
   "keywords": [
-    "C#", ".NET 8", "React", "Legacy Modernization"
+    "C#", "DevExpress", ".NET 8", "React", "Legacy Modernization"
   ],
   "articleBody": "생산현장 작업자가 작업지시를 확인하고 생산 진행, 실적, 비가동, 불량 등을 처리하던 단말 시스템을 유지보수하고 웹 전환 가능성을 검토한 작업입니다.\n기존 설치형 시스템 유지보수: 2019년 ~ 2023년 확인 가능 웹 전환 PoC: 2026년 7월 상태: 설치형 시스템은 운영·유지보수, 웹 전환본은 초기 PoC 기존 시스템은 현장 PC에 설치하는 Windows 데스크톱 애플리케이션이었습니다. 작업장·라인·근무조를 고른 뒤 작업지시와 계획수량을 확인하고, 작업 시작과 종료, 생산실적, 불량, 재투입, 설비 비가동 등을 처리했습니다. 바코드·포장·라벨 같은 보조 기능과 현장별 예외 처리, 외부 시스템 연계도 포함돼 있었습니다.\n오랫동안 운영하면서 기능이 많아진 만큼 오래된 UI 라이브러리와 플랫폼 의존성이 쌓였고, PC마다 설치하고 업데이트해야 하는 부담도 있었습니다. 레거시를 분석하고 유지보수한 경험을 바탕으로, .NET 8과 React를 이용해 브라우저 기반으로 옮기는 구조와 일부 기능을 개발했습니다.\n한 번에 바꾸지 않은 이유 설치형 화면을 그대로 웹으로 복사하면 사용하는 기술만 달라지고 기존의 복잡성은 그대로 남습니다. 그래서 작업 시작·마감·비가동처럼 상태가 바뀌는 업무 규칙과 현장별 예외를 먼저 파악한 뒤, 조회와 공통 기능부터 옮기는 점진적인 방식을 택했습니다.\n기존 환경은 C#/.NET Framework와 WinForms, 데스크톱 UI 컴포넌트, 관계형 데이터베이스로 구성돼 있었고 바코드·라벨·현장 장비와 연동했습니다. 전환본은 .NET 8 REST API와 React·TypeScript·Vite 기반 키오스크 UI로 구성했습니다.\nPoC에서는 REST API 골격과 키오스크 화면을 만들고 서버 연결 상태 확인, 작업장 선택, 라인 상태 조회를 구현했습니다. 실제 데이터 없이도 개발할 수 있도록 로컬 데이터 재현 환경도 마련했습니다. 다만 인증과 전체 업무 화면, 현장 장비 연동, 종단 간 검증까지 끝낸 상태는 아닙니다.\n현장 시스템이라서 남은 고민 브라우저 화면은 서버 연결에 더 의존하기 때문에 연결 상태 표시와 재시도, 중복 요청 방지, 로컬 상태와 서버 상태의 일관성을 함께 고려해야 했습니다. 바코드·라벨·각인처럼 로컬 장비를 쓰는 기능은 일반 웹 API만으로 옮기기 어려워 브라우저 지원 범위, 로컬 브리지, 별도 에이전트 가운데 적절한 방식을 기능별로 판단해야 합니다.\n장기간 운영된 시스템에는 화면만 봐서는 알기 어려운 예외가 많았습니다. 조회와 공통 기능처럼 작은 범위부터 옮기고 기존 시스템의 결과와 비교하는 것이 회귀 위험을 줄이는 현실적인 방법이었습니다. 이 작업에서 중요했던 것은 최신 기술 자체보다, 운영을 멈추지 않으면서 기존 업무를 이해하고 조금씩 고도화하는 과정이었습니다.\n회사·고객·공장·장비·데이터베이스를 식별할 수 있는 정보와 실제 화면은 보안을 위해 공개하지 않습니다.\n",
   "wordCount" : "314",
@@ -130,6 +131,7 @@
     </div>
     <div class="pf-tags">
       <span class="pf-tag">C#</span>
+      <span class="pf-tag">DevExpress</span>
       <span class="pf-tag">.NET 8</span>
       <span class="pf-tag">React</span>
       <span class="pf-tag">Legacy Modernization</span>
