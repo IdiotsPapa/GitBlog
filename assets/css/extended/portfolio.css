@@ -162,6 +162,38 @@ body.portfolio-site .top-link {
   margin: 0 0 2rem;
 }
 
+/* Site-wide backdrop: grid + film grain */
+body.portfolio-site::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 100% 90% at 50% 20%, #000 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 90% at 50% 20%, #000 55%, transparent 100%);
+}
+
+body.portfolio-site::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+}
+
+body.portfolio-site .header,
+body.portfolio-site .main,
+body.portfolio-site .footer {
+  position: relative;
+  z-index: 1;
+}
+
 .pf-hero {
   min-height: 92vh;
   display: flex;
@@ -174,14 +206,56 @@ body.portfolio-site .top-link {
   margin: 0 auto;
 }
 
+/* Drifting red glow behind the hero */
 .pf-hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -20%;
   background:
-    radial-gradient(ellipse 80% 50% at 70% 20%, rgba(224, 32, 32, 0.08), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(255, 255, 255, 0.03), transparent 50%);
+    radial-gradient(ellipse 48% 36% at 74% 22%, rgba(224, 32, 32, 0.32), transparent 62%),
+    radial-gradient(ellipse 38% 30% at 14% 76%, rgba(255, 255, 255, 0.09), transparent 58%),
+    radial-gradient(ellipse 30% 24% at 46% 50%, rgba(224, 32, 32, 0.14), transparent 68%);
   pointer-events: none;
+  animation: pf-glow-drift 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Thin red horizon line sweeping through the hero */
+.pf-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(224, 32, 32, 0.55) 30%, rgba(224, 32, 32, 0.95) 50%, rgba(224, 32, 32, 0.55) 70%, transparent);
+  box-shadow: 0 0 18px rgba(224, 32, 32, 0.45);
+  pointer-events: none;
+  animation: pf-line-fall 18s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes pf-glow-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(4%, 6%, 0) scale(1.12);
+  }
+}
+
+@keyframes pf-line-fall {
+  0%,
+  100% {
+    top: 18%;
+    opacity: 0.45;
+  }
+
+  50% {
+    top: 78%;
+    opacity: 0.95;
+  }
 }
 
 .pf-hero__inner {
@@ -555,6 +629,16 @@ body.portfolio-site .top-link {
   .pf-btn:hover,
   .pf-card:hover {
     transform: none;
+  }
+
+  .pf-hero::before,
+  .pf-hero::after {
+    animation: none;
+  }
+
+  .pf-hero::after {
+    top: 50%;
+    opacity: 0.35;
   }
 }
 

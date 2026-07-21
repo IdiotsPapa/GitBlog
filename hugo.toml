@@ -1,5 +1,5 @@
 baseURL = "https://idiotspapa.github.io/GitBlog/"
-title = "[이름] — Portfolio"
+title = "장현우 — Portfolio"
 theme = "PaperMod"
 languageCode = "ko"
 enableRobotsTXT = true
@@ -9,7 +9,7 @@ summaryLength = 40
   pagerSize = 10
 
 [params]
-  author = "[이름]"
+  author = "장현우"
   description = "C# / ASP.NET 사내 시스템 개발·운영과 AI 도구 활용 포트폴리오"
   defaultTheme = "dark"
   disableThemeToggle = true

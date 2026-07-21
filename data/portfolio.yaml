@@ -1,5 +1,5 @@
 profile:
-  name: "[이름]"
+  name: "장현우"
   title: ".NET INTERNAL SYSTEMS DEVELOPER"
   headline: "사내 웹·ERP 시스템 개발과 운영"
   years: 7
@@ -48,7 +48,7 @@ principles:
     text: "운영 중인 시스템은 분석·유지보수 후 점진적으로 전환 가능한 형태를 찾습니다."
 
 contact:
-  email: "[이메일]"
+  email: "hyeonwoo_jang@kakao.com"
   github: "https://github.com/IdiotsPapa"
   github_label: "IdiotsPapa"
   location: "대구"
