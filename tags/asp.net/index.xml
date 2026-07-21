@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ASP.NET on [이름] — Portfolio</title>
+    <title>ASP.NET on 장현우 — Portfolio</title>
     <link>https://idiotspapa.github.io/GitBlog/tags/asp.net/</link>
-    <description>Recent content in ASP.NET on [이름] — Portfolio</description>
+    <description>Recent content in ASP.NET on 장현우 — Portfolio</description>
     <generator>Hugo -- 0.164.0</generator>
     <language>ko</language>
     <lastBuildDate>Tue, 21 Jul 2026 00:10:00 +0900</lastBuildDate>
