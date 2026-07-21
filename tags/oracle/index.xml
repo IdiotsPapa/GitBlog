@@ -22,5 +22,12 @@
       <guid>https://idiotspapa.github.io/GitBlog/projects/ticket-system/</guid>
       <description>IT 지원 요청부터 결재, SAP 변경 이관, 운영 대시보드까지 묶은 사내 업무 시스템</description>
     </item>
+    <item>
+      <title>출장 정산 시스템</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</link>
+      <pubDate>Tue, 21 Jul 2026 00:10:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</guid>
+      <description>출장·교육 신청/정산, Report, 기준정보 — ASP.NET Core 3.1 · Oracle 중심 사내 웹 개발·운영</description>
+    </item>
   </channel>
 </rss>
