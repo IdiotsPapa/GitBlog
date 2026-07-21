@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>노트 on IdiotsPapa&#39;s Dev Blog</title>
+    <title>노트 on [이름] — Portfolio</title>
     <link>https://idiotspapa.github.io/GitBlog/notes/</link>
-    <description>Recent content in 노트 on IdiotsPapa&#39;s Dev Blog</description>
+    <description>Recent content in 노트 on [이름] — Portfolio</description>
     <generator>Hugo -- 0.164.0</generator>
     <language>ko</language>
     <lastBuildDate>Thu, 17 Jul 2025 00:39:49 +0900</lastBuildDate>
@@ -13,12 +13,12 @@
       <link>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</link>
       <pubDate>Thu, 17 Jul 2025 00:39:49 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</guid>
-      <description>&lt;p&gt;Hugo는 &lt;code&gt;content&lt;/code&gt; 아래의 디렉터리를 기준으로 섹션을 구분한다.&lt;/p&gt;
+      <description>&lt;p&gt;Hugo를 설정하면서 콘텐츠를 나누는 방법을 정리했다. &lt;code&gt;content&lt;/code&gt; 아래의 디렉터리가 각 섹션이 된다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;content/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── posts/       # 일반 글
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── notes/       # 짧은 학습 기록
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── projects/    # 프로젝트 포트폴리오
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;각 Markdown 파일의 front matter에는 제목·작성일·공개 여부를 넣는다.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;각 Markdown 파일의 front matter에는 제목, 작성일, 공개 여부를 넣었다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;+++&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;글 제목&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2025-07-17T00:00:00+09:00&amp;#34;&lt;/span&gt;

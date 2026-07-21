@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>AutoReel AI — 숏폼 영상 생성 파이프라인 | IdiotsPapa&#39;s Dev Blog</title>
+<title>AutoReel AI — 숏폼 영상 생성 파이프라인 | [이름] — Portfolio</title>
 <meta name="keywords" content="Python, AI Agent, Claude, Automation">
 <meta name="description" content="트렌드 수집부터 대본·음성·영상 합성, 검수와 YouTube 게시까지 자동화한 Python MVP">
-<meta name="author" content="IdiotsPapa">
+<meta name="author" content="[이름]">
 <link rel="canonical" href="https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/">
-<link crossorigin="anonymous" href="/GitBlog/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/GitBlog/assets/css/stylesheet.cd77f94bd24a94d57e5b3a17b39deaed772a6dfa8a8cd52cab49cd2ab82bd580.css" integrity="sha256-zXf5S9JKlNV&#43;WzoXs53q7XcqbfqKjNUsq0nNKrgr1YA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://idiotspapa.github.io/GitBlog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://idiotspapa.github.io/GitBlog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://idiotspapa.github.io/GitBlog/favicon-32x32.png">
@@ -27,36 +27,14 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:url" content="https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/">
-  <meta property="og:site_name" content="IdiotsPapa&#39;s Dev Blog">
+</noscript><script>
+  document.documentElement.classList.add('portfolio-site-root');
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('portfolio-site', 'dark');
+  });
+</script>
+<meta property="og:url" content="https://idiotspapa.github.io/GitBlog/projects/autoreel-ai/">
+  <meta property="og:site_name" content="[이름] — Portfolio">
   <meta property="og:title" content="AutoReel AI — 숏폼 영상 생성 파이프라인">
   <meta property="og:description" content="트렌드 수집부터 대본·음성·영상 합성, 검수와 YouTube 게시까지 자동화한 Python MVP">
   <meta property="og:locale" content="ko">
@@ -81,7 +59,7 @@
     {
       "@type": "ListItem",
       "position":  1 ,
-      "name": "프로젝트",
+      "name": "Projects",
       "item": "https://idiotspapa.github.io/GitBlog/projects/"
     }, 
     {
@@ -103,14 +81,14 @@
   "keywords": [
     "Python", "AI Agent", "Claude", "Automation"
   ],
-  "articleBody": "프로젝트 개요 외부 트렌드를 수집하고 AI로 대본을 작성한 뒤, 음성·영상·자막을 합성해 숏폼 영상으로 만드는 자동화 MVP입니다.\n작업 기간: 2026년 3월 19일 ~ 4월 19일 상태: 핵심 흐름이 동작하는 MVP, 운영 제품으로는 보완 중 역할: 파이프라인 설계·구현·실행 검증 전체 흐름 트렌드 수집 → 유사 키워드 병합·점수화 → AI 대본 생성 → TTS 음성 생성 → 영상 소스 확보 → 자막·세로 영상 합성 → 형식 QC → 사람 검수 또는 자동 승인 → YouTube 게시 단일 API 호출 예제가 아니라, 단계별 상태와 실패 처리까지 포함한 작업 파이프라인을 만드는 데 초점을 맞췄습니다.\n실제 구현한 기능 여러 출처의 트렌드 병렬 수집 유사 키워드 병합 및 가중치 기반 점수화 Claude·OpenAI를 이용한 [Hook] / [Body] / [CTA] 대본 생성 품질 점수가 낮은 대본의 제한적 재작성 직접 작성한 파일·문자열 대본 입력 TTS 기반 한국어 음성 생성 스톡 영상 검색 및 생성형 영상 연동 실험 문장 길이에 맞춘 SRT 자막 생성 FFmpeg 기반 1080×1920 영상 합성 길이·해상도·금지어를 확인하는 형식 QC JSON 기반 작업 상태·산출물 이력 관리 수동 승인과 점수 기반 자동 승인 OAuth 기반 YouTube 업로드 반복 실행과 여러 대본의 일괄 처리 기술 스택 Python / PowerShell Anthropic Claude, OpenAI ElevenLabs FFmpeg YouTube Data API, Google OAuth Pexels·Pixabay·생성형 영상 API APScheduler 로컬 JSON 상태 저장 설계하며 고민한 점 외부 API 실패가 전체 작업 실패가 되지 않도록 AI·TTS·영상 API는 비용과 장애 가능성이 있습니다. 단계별 fallback을 두어 일부 API가 실패하더라도 파이프라인 구조와 다음 단계를 검증할 수 있게 했습니다.\n생성 속도와 사람 검수의 균형 자동 승인은 빠르지만 현재 QC는 길이·해상도 같은 형식적 품질만 판단합니다. 사실성, 저작권, 대본과 영상의 의미적 일치는 사람이 확인해야 합니다. 따라서 수동 검수와 자동 승인을 모두 지원하되, 자동화가 곧 품질 보장을 의미하지 않도록 구분했습니다.\n모바일 가독성 TTS 길이에 맞춰 영상과 자막 시간을 조정하고, 긴 문장은 문장·글자 수 기준으로 나눴습니다. 생성 성공 여부뿐 아니라 세로 화면에서 읽히는지도 고려했습니다.\nAI 도구를 다룬 방식 AI는 설계 초안과 반복 구현을 빠르게 만드는 데 활용했습니다. 생성된 결과는 그대로 신뢰하지 않고 실행 로그와 산출물을 확인했습니다.\n특히 API 키와 OAuth 토큰은 콘텐츠와 분리해야 합니다. 공개 저장소 전환 전에는 Git 이력까지 점검하고, 노출 가능성이 있는 키를 폐기·교체해야 한다는 점도 확인했습니다.\n현재 한계 사실 검증과 출처 인용 미구현 Instagram·TikTok 게시 미구현 자동 테스트·큐·데이터베이스·재시도 정책 부족 의미 기반 영상 품질 판정 미구현 의존성 버전 고정과 배포 재현성 보완 필요 따라서 이 프로젝트는 “완전 자동 콘텐츠 서비스”가 아니라, AI 결과물을 검수 가능한 단계로 연결해 본 자동화 MVP로 소개합니다.\n보안 API 키, OAuth 토큰, 인증 파일, 실행 로그와 미공개 산출물은 공개하지 않습니다.\n",
-  "wordCount" : "392",
+  "articleBody": "시작한 이유 트렌드 하나를 골라 숏폼 영상으로 올리기까지는 생각보다 손이 많이 갑니다. 자료를 모으고, 대본을 쓰고, 음성과 영상을 맞추고, 자막을 입힌 다음 게시까지 해야 합니다. 이 흐름을 어디까지 자동화할 수 있는지 확인하려고 Python으로 MVP를 만들었습니다.\n작업 기간: 2026년 3월 19일 ~ 4월 19일 상태: 핵심 흐름이 동작하는 MVP, 운영 제품으로는 보완 중 역할: 파이프라인 설계·구현·실행 검증 가장 오래 붙잡았던 문제 처음에는 각 API를 호출해 결과를 받으면 끝날 거라 생각했습니다. 실제로 연결해 보니 AI·TTS·영상 API 중 하나만 실패해도 앞에서 만든 결과까지 다시 처리해야 하는 문제가 더 컸습니다. 비용이 드는 호출을 무작정 반복할 수도 없었습니다.\n그래서 작업을 한 덩어리로 실행하지 않고 아래 단계로 나눴습니다.\n트렌드 수집 → 유사 키워드 병합·점수화 → AI 대본 생성 → TTS 음성 생성 → 영상 소스 확보 → 자막·세로 영상 합성 → 형식 QC → 사람 검수 또는 자동 승인 → YouTube 게시 각 단계의 상태와 산출물 이력은 로컬 JSON에 남겼고, 일부 외부 API가 실패해도 다음 동작을 확인할 수 있도록 단계별 fallback을 뒀습니다. 반복 실행과 여러 대본의 일괄 처리도 이 구조 위에 붙였습니다.\n영상 한 편이 만들어지는 과정 여러 출처에서 트렌드를 병렬로 모은 뒤 비슷한 키워드를 합치고 가중치로 순서를 정합니다. 선택한 주제는 Claude나 OpenAI로 보내 [Hook] / [Body] / [CTA] 구조의 대본으로 만들었습니다. 점수가 낮을 때는 횟수를 제한해 다시 쓰게 했고, AI 대신 직접 작성한 파일이나 문자열을 넣는 경로도 열어 뒀습니다.\n한국어 음성은 ElevenLabs TTS로 만들고, Pexels·Pixabay에서 스톡 영상을 찾거나 생성형 영상 API를 연결해 보는 실험을 했습니다. 이후 FFmpeg로 1080×1920 세로 영상을 합성합니다. 자막은 TTS 길이에 맞춰 SRT로 만들되, 긴 문장이 모바일 화면을 가득 채우지 않도록 문장과 글자 수 기준으로 나눴습니다.\n마지막에는 길이·해상도·금지어를 확인합니다. 통과한 결과는 사람이 승인하거나 점수 기준으로 자동 승인한 뒤 Google OAuth와 YouTube Data API를 통해 업로드할 수 있습니다.\n자동 QC를 만들고도 수동 검수를 남긴 이유 현재 QC가 확인하는 것은 형식입니다. 영상 길이와 해상도가 맞는지, 금지어가 들어갔는지는 코드로 판정할 수 있지만 내용이 사실인지, 영상과 대본이 의미상 맞는지, 저작권 문제가 없는지는 판단하지 못합니다.\n자동 승인은 처리 속도를 확인하기 위한 선택지일 뿐 품질 보장이 아닙니다. 그래서 수동 승인 경로를 함께 두었습니다. AI도 설계 초안과 반복 구현에 활용했지만, 생성된 코드를 그대로 믿기보다는 실행 로그와 실제 산출물을 확인했습니다.\n사용한 도구 Python과 PowerShell로 실행 흐름을 구성했고 APScheduler로 반복 작업을 다뤘습니다. 대본 생성에는 Anthropic Claude와 OpenAI, 음성에는 ElevenLabs, 영상 합성에는 FFmpeg를 사용했습니다. 영상 소스는 Pexels·Pixabay·생성형 영상 API를 연결했고, 게시에는 YouTube Data API와 Google OAuth를 사용했습니다.\n아직 남은 일 사실 검증과 출처 인용, 의미 기반 영상 품질 판정은 아직 구현하지 못했습니다. Instagram·TikTok 게시도 지원하지 않습니다. 자동 테스트와 큐, 데이터베이스, 충분한 재시도 정책이 부족하고 의존성 버전 고정과 배포 재현성도 더 보완해야 합니다.\n따라서 지금 단계는 완전 자동 콘텐츠 서비스가 아니라, AI 결과물을 검수 가능한 단계로 이어 본 자동화 MVP입니다.\n공개 시 주의할 점 API 키와 OAuth 토큰은 콘텐츠와 분리해야 합니다. 공개 저장소로 전환하기 전에는 Git 이력까지 확인하고, 노출 가능성이 있는 키는 폐기·교체해야 합니다. 인증 파일, 실행 로그와 미공개 산출물도 공개하지 않습니다.\n",
+  "wordCount" : "459",
   "inLanguage": "en",
   "datePublished": "2026-07-21T13:21:00+09:00",
   "dateModified": "2026-07-21T13:21:00+09:00",
   "author":{
     "@type": "Person",
-    "name": "IdiotsPapa"
+    "name": "[이름]"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -118,7 +96,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "IdiotsPapa's Dev Blog",
+    "name": "[이름] — Portfolio",
     "logo": {
       "@type": "ImageObject",
       "url": "https://idiotspapa.github.io/GitBlog/favicon.ico"
@@ -128,94 +106,46 @@
 </script>
 </head>
 
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://idiotspapa.github.io/GitBlog/" accesskey="h" title="IdiotsPapa&#39;s Dev Blog (Alt + H)">IdiotsPapa&#39;s Dev Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/" title="홈">
-                    <span>홈</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/posts/" title="글">
-                    <span>글</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/notes/" title="노트">
-                    <span>노트</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/projects/" title="프로젝트">
-                    <span>프로젝트</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/about/" title="소개">
-                    <span>소개</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<body class=" dark" id="top"><header class="header">
+  <nav class="nav">
+    <div class="logo">
+      <a href="https://idiotspapa.github.io/GitBlog/" accesskey="h" title="[이름]">
+        [이름]
+      </a>
+    </div>
+    <ul id="menu">
+      <li><a href="https://idiotspapa.github.io/GitBlog/"><span>Home</span></a></li>
+      <li><a href="/GitBlog/projects/"><span>Projects</span></a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/#contact"><span>Contact</span></a></li>
+    </ul>
+  </nav>
 </header>
 <main class="main">
+<div class="pf-page pf-project-page">
+  <header class="pf-project-header pf-animate">
+    <a class="pf-back" href="/GitBlog/projects/">← Projects</a>
+    <span class="pf-label">ai</span>
+    <h1 class="pf-title">AutoReel AI — 숏폼 영상 생성 파이프라인</h1>
+    <div class="pf-project-meta"><span>2026.03 — 04</span><span>설계·구현</span><span>ai</span>
+    </div>
+    <div class="pf-tags">
+      <span class="pf-tag">Python</span>
+      <span class="pf-tag">AI Agent</span>
+      <span class="pf-tag">Claude</span>
+      <span class="pf-tag">Automation</span>
+    </div>
+  </header>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://idiotspapa.github.io/GitBlog/">홈</a>&nbsp;»&nbsp;<a href="https://idiotspapa.github.io/GitBlog/projects/">프로젝트</a></div>
-    <h1 class="post-title entry-hint-parent">
-      AutoReel AI — 숏폼 영상 생성 파이프라인
-    </h1>
-    <div class="post-meta"><span title='2026-07-21 13:21:00 +0900 +0900'>2026-07-21</span>&nbsp;·&nbsp;2 분&nbsp;·&nbsp;IdiotsPapa
-
-</div>
-  </header> 
-  <div class="post-content"><h2 id="프로젝트-개요">프로젝트 개요<a hidden class="anchor" aria-hidden="true" href="#프로젝트-개요">#</a></h2>
-<p>외부 트렌드를 수집하고 AI로 대본을 작성한 뒤, 음성·영상·자막을 합성해 숏폼 영상으로 만드는 자동화 MVP입니다.</p>
+  <article class="pf-project-content pf-animate"><h2 id="시작한-이유">시작한 이유</h2>
+<p>트렌드 하나를 골라 숏폼 영상으로 올리기까지는 생각보다 손이 많이 갑니다. 자료를 모으고, 대본을 쓰고, 음성과 영상을 맞추고, 자막을 입힌 다음 게시까지 해야 합니다. 이 흐름을 어디까지 자동화할 수 있는지 확인하려고 Python으로 MVP를 만들었습니다.</p>
 <ul>
 <li>작업 기간: 2026년 3월 19일 ~ 4월 19일</li>
 <li>상태: 핵심 흐름이 동작하는 MVP, 운영 제품으로는 보완 중</li>
 <li>역할: 파이프라인 설계·구현·실행 검증</li>
 </ul>
-<h2 id="전체-흐름">전체 흐름<a hidden class="anchor" aria-hidden="true" href="#전체-흐름">#</a></h2>
+<h2 id="가장-오래-붙잡았던-문제">가장 오래 붙잡았던 문제</h2>
+<p>처음에는 각 API를 호출해 결과를 받으면 끝날 거라 생각했습니다. 실제로 연결해 보니 AI·TTS·영상 API 중 하나만 실패해도 앞에서 만든 결과까지 다시 처리해야 하는 문제가 더 컸습니다. 비용이 드는 호출을 무작정 반복할 수도 없었습니다.</p>
+<p>그래서 작업을 한 덩어리로 실행하지 않고 아래 단계로 나눴습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">트렌드 수집
 </span></span><span class="line"><span class="cl">  → 유사 키워드 병합·점수화
 </span></span><span class="line"><span class="cl">  → AI 대본 생성
@@ -225,199 +155,87 @@
 </span></span><span class="line"><span class="cl">  → 형식 QC
 </span></span><span class="line"><span class="cl">  → 사람 검수 또는 자동 승인
 </span></span><span class="line"><span class="cl">  → YouTube 게시
-</span></span></code></pre></div><p>단일 API 호출 예제가 아니라, 단계별 상태와 실패 처리까지 포함한 <strong>작업 파이프라인</strong>을 만드는 데 초점을 맞췄습니다.</p>
-<h2 id="실제-구현한-기능">실제 구현한 기능<a hidden class="anchor" aria-hidden="true" href="#실제-구현한-기능">#</a></h2>
-<ul>
-<li>여러 출처의 트렌드 병렬 수집</li>
-<li>유사 키워드 병합 및 가중치 기반 점수화</li>
-<li>Claude·OpenAI를 이용한 <code>[Hook] / [Body] / [CTA]</code> 대본 생성</li>
-<li>품질 점수가 낮은 대본의 제한적 재작성</li>
-<li>직접 작성한 파일·문자열 대본 입력</li>
-<li>TTS 기반 한국어 음성 생성</li>
-<li>스톡 영상 검색 및 생성형 영상 연동 실험</li>
-<li>문장 길이에 맞춘 SRT 자막 생성</li>
-<li>FFmpeg 기반 1080×1920 영상 합성</li>
-<li>길이·해상도·금지어를 확인하는 형식 QC</li>
-<li>JSON 기반 작업 상태·산출물 이력 관리</li>
-<li>수동 승인과 점수 기반 자동 승인</li>
-<li>OAuth 기반 YouTube 업로드</li>
-<li>반복 실행과 여러 대본의 일괄 처리</li>
-</ul>
-<h2 id="기술-스택">기술 스택<a hidden class="anchor" aria-hidden="true" href="#기술-스택">#</a></h2>
-<ul>
-<li>Python / PowerShell</li>
-<li>Anthropic Claude, OpenAI</li>
-<li>ElevenLabs</li>
-<li>FFmpeg</li>
-<li>YouTube Data API, Google OAuth</li>
-<li>Pexels·Pixabay·생성형 영상 API</li>
-<li>APScheduler</li>
-<li>로컬 JSON 상태 저장</li>
-</ul>
-<h2 id="설계하며-고민한-점">설계하며 고민한 점<a hidden class="anchor" aria-hidden="true" href="#설계하며-고민한-점">#</a></h2>
-<h3 id="외부-api-실패가-전체-작업-실패가-되지-않도록">외부 API 실패가 전체 작업 실패가 되지 않도록<a hidden class="anchor" aria-hidden="true" href="#외부-api-실패가-전체-작업-실패가-되지-않도록">#</a></h3>
-<p>AI·TTS·영상 API는 비용과 장애 가능성이 있습니다. 단계별 fallback을 두어 일부 API가 실패하더라도 파이프라인 구조와 다음 단계를 검증할 수 있게 했습니다.</p>
-<h3 id="생성-속도와-사람-검수의-균형">생성 속도와 사람 검수의 균형<a hidden class="anchor" aria-hidden="true" href="#생성-속도와-사람-검수의-균형">#</a></h3>
-<p>자동 승인은 빠르지만 현재 QC는 길이·해상도 같은 <strong>형식적 품질</strong>만 판단합니다. 사실성, 저작권, 대본과 영상의 의미적 일치는 사람이 확인해야 합니다. 따라서 수동 검수와 자동 승인을 모두 지원하되, 자동화가 곧 품질 보장을 의미하지 않도록 구분했습니다.</p>
-<h3 id="모바일-가독성">모바일 가독성<a hidden class="anchor" aria-hidden="true" href="#모바일-가독성">#</a></h3>
-<p>TTS 길이에 맞춰 영상과 자막 시간을 조정하고, 긴 문장은 문장·글자 수 기준으로 나눴습니다. 생성 성공 여부뿐 아니라 세로 화면에서 읽히는지도 고려했습니다.</p>
-<h2 id="ai-도구를-다룬-방식">AI 도구를 다룬 방식<a hidden class="anchor" aria-hidden="true" href="#ai-도구를-다룬-방식">#</a></h2>
-<p>AI는 설계 초안과 반복 구현을 빠르게 만드는 데 활용했습니다. 생성된 결과는 그대로 신뢰하지 않고 실행 로그와 산출물을 확인했습니다.</p>
-<p>특히 API 키와 OAuth 토큰은 콘텐츠와 분리해야 합니다. 공개 저장소 전환 전에는 Git 이력까지 점검하고, 노출 가능성이 있는 키를 폐기·교체해야 한다는 점도 확인했습니다.</p>
-<h2 id="현재-한계">현재 한계<a hidden class="anchor" aria-hidden="true" href="#현재-한계">#</a></h2>
-<ul>
-<li>사실 검증과 출처 인용 미구현</li>
-<li>Instagram·TikTok 게시 미구현</li>
-<li>자동 테스트·큐·데이터베이스·재시도 정책 부족</li>
-<li>의미 기반 영상 품질 판정 미구현</li>
-<li>의존성 버전 고정과 배포 재현성 보완 필요</li>
-</ul>
-<p>따라서 이 프로젝트는 “완전 자동 콘텐츠 서비스”가 아니라, <strong>AI 결과물을 검수 가능한 단계로 연결해 본 자동화 MVP</strong>로 소개합니다.</p>
-<h2 id="보안">보안<a hidden class="anchor" aria-hidden="true" href="#보안">#</a></h2>
-<p>API 키, OAuth 토큰, 인증 파일, 실행 로그와 미공개 산출물은 공개하지 않습니다.</p>
+</span></span></code></pre></div><p>각 단계의 상태와 산출물 이력은 로컬 JSON에 남겼고, 일부 외부 API가 실패해도 다음 동작을 확인할 수 있도록 단계별 fallback을 뒀습니다. 반복 실행과 여러 대본의 일괄 처리도 이 구조 위에 붙였습니다.</p>
+<h2 id="영상-한-편이-만들어지는-과정">영상 한 편이 만들어지는 과정</h2>
+<p>여러 출처에서 트렌드를 병렬로 모은 뒤 비슷한 키워드를 합치고 가중치로 순서를 정합니다. 선택한 주제는 Claude나 OpenAI로 보내 <code>[Hook] / [Body] / [CTA]</code> 구조의 대본으로 만들었습니다. 점수가 낮을 때는 횟수를 제한해 다시 쓰게 했고, AI 대신 직접 작성한 파일이나 문자열을 넣는 경로도 열어 뒀습니다.</p>
+<p>한국어 음성은 ElevenLabs TTS로 만들고, Pexels·Pixabay에서 스톡 영상을 찾거나 생성형 영상 API를 연결해 보는 실험을 했습니다. 이후 FFmpeg로 1080×1920 세로 영상을 합성합니다. 자막은 TTS 길이에 맞춰 SRT로 만들되, 긴 문장이 모바일 화면을 가득 채우지 않도록 문장과 글자 수 기준으로 나눴습니다.</p>
+<p>마지막에는 길이·해상도·금지어를 확인합니다. 통과한 결과는 사람이 승인하거나 점수 기준으로 자동 승인한 뒤 Google OAuth와 YouTube Data API를 통해 업로드할 수 있습니다.</p>
+<h2 id="자동-qc를-만들고도-수동-검수를-남긴-이유">자동 QC를 만들고도 수동 검수를 남긴 이유</h2>
+<p>현재 QC가 확인하는 것은 형식입니다. 영상 길이와 해상도가 맞는지, 금지어가 들어갔는지는 코드로 판정할 수 있지만 내용이 사실인지, 영상과 대본이 의미상 맞는지, 저작권 문제가 없는지는 판단하지 못합니다.</p>
+<p>자동 승인은 처리 속도를 확인하기 위한 선택지일 뿐 품질 보장이 아닙니다. 그래서 수동 승인 경로를 함께 두었습니다. AI도 설계 초안과 반복 구현에 활용했지만, 생성된 코드를 그대로 믿기보다는 실행 로그와 실제 산출물을 확인했습니다.</p>
+<h2 id="사용한-도구">사용한 도구</h2>
+<p>Python과 PowerShell로 실행 흐름을 구성했고 APScheduler로 반복 작업을 다뤘습니다. 대본 생성에는 Anthropic Claude와 OpenAI, 음성에는 ElevenLabs, 영상 합성에는 FFmpeg를 사용했습니다. 영상 소스는 Pexels·Pixabay·생성형 영상 API를 연결했고, 게시에는 YouTube Data API와 Google OAuth를 사용했습니다.</p>
+<h2 id="아직-남은-일">아직 남은 일</h2>
+<p>사실 검증과 출처 인용, 의미 기반 영상 품질 판정은 아직 구현하지 못했습니다. Instagram·TikTok 게시도 지원하지 않습니다. 자동 테스트와 큐, 데이터베이스, 충분한 재시도 정책이 부족하고 의존성 버전 고정과 배포 재현성도 더 보완해야 합니다.</p>
+<p>따라서 지금 단계는 완전 자동 콘텐츠 서비스가 아니라, AI 결과물을 검수 가능한 단계로 이어 본 자동화 MVP입니다.</p>
+<h2 id="공개-시-주의할-점">공개 시 주의할 점</h2>
+<p>API 키와 OAuth 토큰은 콘텐츠와 분리해야 합니다. 공개 저장소로 전환하기 전에는 Git 이력까지 확인하고, 노출 가능성이 있는 키는 폐기·교체해야 합니다. 인증 파일, 실행 로그와 미공개 산출물도 공개하지 않습니다.</p>
 
+  </article>
 
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/python/">Python</a></li>
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/ai-agent/">AI Agent</a></li>
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/claude/">Claude</a></li>
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/automation/">Automation</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://idiotspapa.github.io/GitBlog/projects/memora/">
-    <span class="title">« 이전 페이지</span>
-    <br>
-    <span>Memora — AI 학습 카드 앱</span>
-  </a>
-  <a class="next" href="https://idiotspapa.github.io/GitBlog/projects/server-monitoring/">
-    <span class="title">다음 페이지 »</span>
-    <br>
-    <span>사내 서버 상태 모니터링 시스템</span>
-  </a>
-</nav>
-
-  </footer>
-</article>
+  <nav class="pf-project-nav">
+    <a href="/GitBlog/projects/server-monitoring/">← 사내 서버 상태 모니터링 시스템</a>
+    <a href="/GitBlog/projects/memora/">Memora — AI 학습 카드 앱 →</a>
+  </nav>
+</div>
     </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://idiotspapa.github.io/GitBlog/">IdiotsPapa&#39;s Dev Blog</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+    <footer class="footer">
+  <span>&copy; 2026 [이름]</span>
+  <span> · </span>
+  <span>대구</span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
 
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a><script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var items = document.querySelectorAll('.pf-animate');
+    if (!items.length || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
     }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
         });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    items.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+
+
+<script>
+  let menu = document.getElementById('menu')
+  if (menu) {
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+      localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length <= 1) return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = '복사';
-
-        function copyingDone() {
-            copybutton.innerHTML = '복사 완료!';
-            setTimeout(() => {
-                copybutton.innerHTML = '복사';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
+  });
 </script>
 </body>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Operations on IdiotsPapa&#39;s Dev Blog</title>
+    <title>Operations on [이름] — Portfolio</title>
     <link>https://idiotspapa.github.io/GitBlog/tags/operations/</link>
-    <description>Recent content in Operations on IdiotsPapa&#39;s Dev Blog</description>
+    <description>Recent content in Operations on [이름] — Portfolio</description>
     <generator>Hugo -- 0.164.0</generator>
     <language>ko</language>
     <lastBuildDate>Tue, 21 Jul 2026 13:20:00 +0900</lastBuildDate>

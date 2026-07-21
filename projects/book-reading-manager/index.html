@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Book Reading Manager — 가족 독서 기록 앱 | IdiotsPapa&#39;s Dev Blog</title>
+<title>Book Reading Manager — 가족 독서 기록 앱 | [이름] — Portfolio</title>
 <meta name="keywords" content="Flutter, Dart, Hive, CSV">
 <meta name="description" content="자녀별 책·독서 기록·계획을 로컬에서 관리하는 Flutter 초기 MVP">
-<meta name="author" content="IdiotsPapa">
+<meta name="author" content="[이름]">
 <link rel="canonical" href="https://idiotspapa.github.io/GitBlog/projects/book-reading-manager/">
-<link crossorigin="anonymous" href="/GitBlog/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/GitBlog/assets/css/stylesheet.cd77f94bd24a94d57e5b3a17b39deaed772a6dfa8a8cd52cab49cd2ab82bd580.css" integrity="sha256-zXf5S9JKlNV&#43;WzoXs53q7XcqbfqKjNUsq0nNKrgr1YA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://idiotspapa.github.io/GitBlog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://idiotspapa.github.io/GitBlog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://idiotspapa.github.io/GitBlog/favicon-32x32.png">
@@ -27,36 +27,14 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:url" content="https://idiotspapa.github.io/GitBlog/projects/book-reading-manager/">
-  <meta property="og:site_name" content="IdiotsPapa&#39;s Dev Blog">
+</noscript><script>
+  document.documentElement.classList.add('portfolio-site-root');
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('portfolio-site', 'dark');
+  });
+</script>
+<meta property="og:url" content="https://idiotspapa.github.io/GitBlog/projects/book-reading-manager/">
+  <meta property="og:site_name" content="[이름] — Portfolio">
   <meta property="og:title" content="Book Reading Manager — 가족 독서 기록 앱">
   <meta property="og:description" content="자녀별 책·독서 기록·계획을 로컬에서 관리하는 Flutter 초기 MVP">
   <meta property="og:locale" content="ko">
@@ -81,7 +59,7 @@
     {
       "@type": "ListItem",
       "position":  1 ,
-      "name": "프로젝트",
+      "name": "Projects",
       "item": "https://idiotspapa.github.io/GitBlog/projects/"
     }, 
     {
@@ -103,14 +81,14 @@
   "keywords": [
     "Flutter", "Dart", "Hive", "CSV"
   ],
-  "articleBody": "프로젝트 개요 부모가 자녀별로 책, 독서 완료 기록과 독서 계획을 관리하는 Flutter 앱입니다.\n초기 개발: 2025년 10월 15일 ~ 11월 2일 후속 보강: 2026년 3월 상태: 핵심 CRUD와 CSV 가져오기를 구현한 초기 MVP 구현한 기능 자녀 프로필 등록·수정·삭제 책 등록·수정·삭제 책에 자녀·읽은 날짜·태그·메모 연결 자녀별 책 목록 필터 독서 계획과 진행률 관리 자녀별 독서 기록과 월별 권수 집계 가족 전체·자녀별 홈 요약 CSV 기반 도서 대량 가져오기 기술 스택 Flutter / Dart Hive / Hive Flutter Hive Generator / build_runner file_picker / csv intl / path_provider 로컬 데이터 설계 책·자녀·계획을 각각 Hive 박스에 저장하고 문자열 ID로 관계를 연결했습니다.\n관계형 DB처럼 외래 키와 자동 cascade가 없기 때문에, 자녀를 삭제할 때 연결된 책의 배정을 해제하고 해당 자녀의 계획을 코드에서 직접 정리했습니다.\nCSV 가져오기 여러 권의 책을 한 번에 등록하기 위해 CSV 업로드를 구현했습니다.\n필수 헤더와 BOM 처리 날짜 형식 검증 자녀 이름 매핑 제목·저자·자녀 기준 중복 확인 중복 시 새 행 대신 기존 책 갱신 잘못된 행은 전체 실패가 아니라 개별 경고 단순 파일 읽기보다, 사용자가 일부 잘못된 데이터를 넣더라도 정상 행까지 잃지 않게 하는 것을 중요하게 봤습니다.\n개발하며 고민한 점 로컬 모델 확장 Hive 모델은 필드 번호가 저장 데이터와 연결되므로 기존 번호를 유지하며 확장해야 합니다. 스키마 변경이 기존 로컬 데이터를 깨뜨리지 않도록 주의했습니다.\nUI 생명주기 BottomSheet가 닫히는 애니메이션 중 컨트롤러를 너무 일찍 해제하면 예외가 발생할 수 있습니다. 화면 전환과 컨트롤러 생명주기를 함께 확인했습니다.\n한글 표시 자녀 이름의 첫 글자를 안전하게 표시하기 위해 코드 유닛 대신 grapheme cluster를 다루는 패키지를 사용했습니다.\n구현하지 않은 항목 화면에 아이디어로 남아 있던 OCR, Google Books 연동, AI 추천, 백업·복원은 구현되지 않았습니다. 독서 계획의 진행률도 독서 기록과 자동 연동되지 않고 사용자가 조절합니다.\n따라서 “AI 독서 앱”이 아니라, 자녀별 로컬 독서 기록과 계획을 관리하는 Flutter MVP로 소개합니다.\n",
-  "wordCount" : "279",
+  "articleBody": "시작은 책 목록 정리였다 가족의 독서 기록을 자녀별로 나눠 보고 싶어서 만든 Flutter 앱입니다. 책과 읽은 날짜를 기록하고, 앞으로 읽을 책의 계획과 진행률도 함께 관리합니다.\n초기 개발: 2025년 10월 15일 ~ 11월 2일 후속 보강: 2026년 3월 상태: 핵심 CRUD와 CSV 가져오기를 구현한 초기 MVP 자녀 프로필과 책은 등록·수정·삭제할 수 있습니다. 책에는 읽은 자녀, 날짜, 태그와 메모를 연결하고 자녀별로 목록을 걸러 봅니다. 홈에서는 가족 전체와 자녀별 기록을 요약하고, 월별로 읽은 권수도 집계합니다. 독서 계획은 별도로 만들고 진행률을 관리합니다.\n여러 권을 옮기다 보니 책을 한 권씩 입력하는 것만으로는 기존 목록을 옮기기 번거로워 CSV 가져오기를 추가했습니다. 파일을 읽는 것보다 잘못된 행을 어떻게 처리할지가 더 고민이었습니다. 날짜 하나가 틀렸다는 이유로 정상인 나머지 책까지 등록되지 않으면 다시 손봐야 할 일이 너무 많아집니다.\n현재 가져오기는 필수 헤더와 BOM을 처리하고 날짜 형식을 검사합니다. CSV의 자녀 이름을 기존 프로필과 연결하며, 제목·저자·자녀 조합으로 중복을 확인합니다. 이미 있는 책이면 새로 추가하는 대신 갱신합니다. 문제가 있는 행은 개별 경고로 남기고 정상 행은 계속 처리하도록 했습니다.\nHive에서 관계를 직접 지킨 방법 책·자녀·계획은 각각 Hive 박스에 저장하고 문자열 ID로 연결했습니다. Hive에는 관계형 DB의 외래 키나 자동 cascade가 없기 때문에 삭제 동작도 직접 챙겨야 했습니다. 자녀를 삭제할 때 그 자녀에게 배정된 책의 연결을 해제하고, 관련 독서 계획도 코드에서 정리합니다.\n후속으로 모델을 확장할 때는 Hive 필드 번호가 이미 저장된 데이터와 연결된다는 점도 주의했습니다. 기존 번호를 바꾸지 않고 새 필드를 추가해 이전 로컬 데이터가 깨지지 않도록 했습니다.\n작지만 오래 걸린 문제들 BottomSheet가 닫히는 애니메이션 도중 컨트롤러를 너무 일찍 해제하면 예외가 발생했습니다. 단순히 화면이 사라졌다고 판단하지 않고 전환 애니메이션과 컨트롤러 생명주기를 함께 확인해 처리했습니다.\n자녀 이름의 첫 글자를 표시하는 부분도 코드 유닛만 잘라서는 한글을 안전하게 다룰 수 없었습니다. 그래서 grapheme cluster를 다루는 패키지를 사용했습니다.\n사용한 기술과 현재 범위 Flutter와 Dart로 개발했고 로컬 저장소는 Hive와 Hive Flutter를 사용했습니다. 모델 생성에는 Hive Generator와 build_runner, CSV 처리에는 file_picker와 csv를 사용했으며 intl과 path_provider도 함께 썼습니다.\nOCR, Google Books 연동, AI 추천, 백업·복원은 화면 아이디어로만 남아 있고 구현하지 않았습니다. 독서 계획의 진행률도 실제 독서 기록에서 자동으로 계산되지 않으며 사용자가 직접 조절합니다.\n현재 Book Reading Manager는 AI 독서 앱이 아니라, 자녀별 로컬 독서 기록과 계획을 관리하는 초기 Flutter MVP입니다.\n",
+  "wordCount" : "337",
   "inLanguage": "en",
   "datePublished": "2026-07-21T13:27:00+09:00",
   "dateModified": "2026-07-21T13:27:00+09:00",
   "author":{
     "@type": "Person",
-    "name": "IdiotsPapa"
+    "name": "[이름]"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -118,7 +96,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "IdiotsPapa's Dev Blog",
+    "name": "[이름] — Portfolio",
     "logo": {
       "@type": "ImageObject",
       "url": "https://idiotspapa.github.io/GitBlog/favicon.ico"
@@ -128,279 +106,123 @@
 </script>
 </head>
 
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://idiotspapa.github.io/GitBlog/" accesskey="h" title="IdiotsPapa&#39;s Dev Blog (Alt + H)">IdiotsPapa&#39;s Dev Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/" title="홈">
-                    <span>홈</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/posts/" title="글">
-                    <span>글</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/notes/" title="노트">
-                    <span>노트</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/projects/" title="프로젝트">
-                    <span>프로젝트</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://idiotspapa.github.io/GitBlog/about/" title="소개">
-                    <span>소개</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<body class=" dark" id="top"><header class="header">
+  <nav class="nav">
+    <div class="logo">
+      <a href="https://idiotspapa.github.io/GitBlog/" accesskey="h" title="[이름]">
+        [이름]
+      </a>
+    </div>
+    <ul id="menu">
+      <li><a href="https://idiotspapa.github.io/GitBlog/"><span>Home</span></a></li>
+      <li><a href="/GitBlog/projects/"><span>Projects</span></a></li>
+      <li><a href="https://idiotspapa.github.io/GitBlog/#contact"><span>Contact</span></a></li>
+    </ul>
+  </nav>
 </header>
 <main class="main">
+<div class="pf-page pf-project-page">
+  <header class="pf-project-header pf-animate">
+    <a class="pf-back" href="/GitBlog/projects/">← Projects</a>
+    <span class="pf-label">mobile</span>
+    <h1 class="pf-title">Book Reading Manager — 가족 독서 기록 앱</h1>
+    <div class="pf-project-meta"><span>2025.10 — 2026.03</span><span>개발</span><span>mobile</span>
+    </div>
+    <div class="pf-tags">
+      <span class="pf-tag">Flutter</span>
+      <span class="pf-tag">Dart</span>
+      <span class="pf-tag">Hive</span>
+      <span class="pf-tag">CSV</span>
+    </div>
+  </header>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://idiotspapa.github.io/GitBlog/">홈</a>&nbsp;»&nbsp;<a href="https://idiotspapa.github.io/GitBlog/projects/">프로젝트</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Book Reading Manager — 가족 독서 기록 앱
-    </h1>
-    <div class="post-meta"><span title='2026-07-21 13:27:00 +0900 +0900'>2026-07-21</span>&nbsp;·&nbsp;2 분&nbsp;·&nbsp;IdiotsPapa
-
-</div>
-  </header> 
-  <div class="post-content"><h2 id="프로젝트-개요">프로젝트 개요<a hidden class="anchor" aria-hidden="true" href="#프로젝트-개요">#</a></h2>
-<p>부모가 자녀별로 책, 독서 완료 기록과 독서 계획을 관리하는 Flutter 앱입니다.</p>
+  <article class="pf-project-content pf-animate"><h2 id="시작은-책-목록-정리였다">시작은 책 목록 정리였다</h2>
+<p>가족의 독서 기록을 자녀별로 나눠 보고 싶어서 만든 Flutter 앱입니다. 책과 읽은 날짜를 기록하고, 앞으로 읽을 책의 계획과 진행률도 함께 관리합니다.</p>
 <ul>
 <li>초기 개발: 2025년 10월 15일 ~ 11월 2일</li>
 <li>후속 보강: 2026년 3월</li>
 <li>상태: 핵심 CRUD와 CSV 가져오기를 구현한 초기 MVP</li>
 </ul>
-<h2 id="구현한-기능">구현한 기능<a hidden class="anchor" aria-hidden="true" href="#구현한-기능">#</a></h2>
-<ul>
-<li>자녀 프로필 등록·수정·삭제</li>
-<li>책 등록·수정·삭제</li>
-<li>책에 자녀·읽은 날짜·태그·메모 연결</li>
-<li>자녀별 책 목록 필터</li>
-<li>독서 계획과 진행률 관리</li>
-<li>자녀별 독서 기록과 월별 권수 집계</li>
-<li>가족 전체·자녀별 홈 요약</li>
-<li>CSV 기반 도서 대량 가져오기</li>
-</ul>
-<h2 id="기술-스택">기술 스택<a hidden class="anchor" aria-hidden="true" href="#기술-스택">#</a></h2>
-<ul>
-<li>Flutter / Dart</li>
-<li>Hive / Hive Flutter</li>
-<li>Hive Generator / build_runner</li>
-<li>file_picker / csv</li>
-<li>intl / path_provider</li>
-</ul>
-<h2 id="로컬-데이터-설계">로컬 데이터 설계<a hidden class="anchor" aria-hidden="true" href="#로컬-데이터-설계">#</a></h2>
-<p>책·자녀·계획을 각각 Hive 박스에 저장하고 문자열 ID로 관계를 연결했습니다.</p>
-<p>관계형 DB처럼 외래 키와 자동 cascade가 없기 때문에, 자녀를 삭제할 때 연결된 책의 배정을 해제하고 해당 자녀의 계획을 코드에서 직접 정리했습니다.</p>
-<h2 id="csv-가져오기">CSV 가져오기<a hidden class="anchor" aria-hidden="true" href="#csv-가져오기">#</a></h2>
-<p>여러 권의 책을 한 번에 등록하기 위해 CSV 업로드를 구현했습니다.</p>
-<ul>
-<li>필수 헤더와 BOM 처리</li>
-<li>날짜 형식 검증</li>
-<li>자녀 이름 매핑</li>
-<li>제목·저자·자녀 기준 중복 확인</li>
-<li>중복 시 새 행 대신 기존 책 갱신</li>
-<li>잘못된 행은 전체 실패가 아니라 개별 경고</li>
-</ul>
-<p>단순 파일 읽기보다, 사용자가 일부 잘못된 데이터를 넣더라도 <strong>정상 행까지 잃지 않게 하는 것</strong>을 중요하게 봤습니다.</p>
-<h2 id="개발하며-고민한-점">개발하며 고민한 점<a hidden class="anchor" aria-hidden="true" href="#개발하며-고민한-점">#</a></h2>
-<h3 id="로컬-모델-확장">로컬 모델 확장<a hidden class="anchor" aria-hidden="true" href="#로컬-모델-확장">#</a></h3>
-<p>Hive 모델은 필드 번호가 저장 데이터와 연결되므로 기존 번호를 유지하며 확장해야 합니다. 스키마 변경이 기존 로컬 데이터를 깨뜨리지 않도록 주의했습니다.</p>
-<h3 id="ui-생명주기">UI 생명주기<a hidden class="anchor" aria-hidden="true" href="#ui-생명주기">#</a></h3>
-<p>BottomSheet가 닫히는 애니메이션 중 컨트롤러를 너무 일찍 해제하면 예외가 발생할 수 있습니다. 화면 전환과 컨트롤러 생명주기를 함께 확인했습니다.</p>
-<h3 id="한글-표시">한글 표시<a hidden class="anchor" aria-hidden="true" href="#한글-표시">#</a></h3>
-<p>자녀 이름의 첫 글자를 안전하게 표시하기 위해 코드 유닛 대신 grapheme cluster를 다루는 패키지를 사용했습니다.</p>
-<h2 id="구현하지-않은-항목">구현하지 않은 항목<a hidden class="anchor" aria-hidden="true" href="#구현하지-않은-항목">#</a></h2>
-<p>화면에 아이디어로 남아 있던 OCR, Google Books 연동, AI 추천, 백업·복원은 구현되지 않았습니다. 독서 계획의 진행률도 독서 기록과 자동 연동되지 않고 사용자가 조절합니다.</p>
-<p>따라서 “AI 독서 앱”이 아니라, <strong>자녀별 로컬 독서 기록과 계획을 관리하는 Flutter MVP</strong>로 소개합니다.</p>
+<p>자녀 프로필과 책은 등록·수정·삭제할 수 있습니다. 책에는 읽은 자녀, 날짜, 태그와 메모를 연결하고 자녀별로 목록을 걸러 봅니다. 홈에서는 가족 전체와 자녀별 기록을 요약하고, 월별로 읽은 권수도 집계합니다. 독서 계획은 별도로 만들고 진행률을 관리합니다.</p>
+<h2 id="여러-권을-옮기다-보니">여러 권을 옮기다 보니</h2>
+<p>책을 한 권씩 입력하는 것만으로는 기존 목록을 옮기기 번거로워 CSV 가져오기를 추가했습니다. 파일을 읽는 것보다 잘못된 행을 어떻게 처리할지가 더 고민이었습니다. 날짜 하나가 틀렸다는 이유로 정상인 나머지 책까지 등록되지 않으면 다시 손봐야 할 일이 너무 많아집니다.</p>
+<p>현재 가져오기는 필수 헤더와 BOM을 처리하고 날짜 형식을 검사합니다. CSV의 자녀 이름을 기존 프로필과 연결하며, 제목·저자·자녀 조합으로 중복을 확인합니다. 이미 있는 책이면 새로 추가하는 대신 갱신합니다. 문제가 있는 행은 개별 경고로 남기고 정상 행은 계속 처리하도록 했습니다.</p>
+<h2 id="hive에서-관계를-직접-지킨-방법">Hive에서 관계를 직접 지킨 방법</h2>
+<p>책·자녀·계획은 각각 Hive 박스에 저장하고 문자열 ID로 연결했습니다. Hive에는 관계형 DB의 외래 키나 자동 cascade가 없기 때문에 삭제 동작도 직접 챙겨야 했습니다. 자녀를 삭제할 때 그 자녀에게 배정된 책의 연결을 해제하고, 관련 독서 계획도 코드에서 정리합니다.</p>
+<p>후속으로 모델을 확장할 때는 Hive 필드 번호가 이미 저장된 데이터와 연결된다는 점도 주의했습니다. 기존 번호를 바꾸지 않고 새 필드를 추가해 이전 로컬 데이터가 깨지지 않도록 했습니다.</p>
+<h2 id="작지만-오래-걸린-문제들">작지만 오래 걸린 문제들</h2>
+<p>BottomSheet가 닫히는 애니메이션 도중 컨트롤러를 너무 일찍 해제하면 예외가 발생했습니다. 단순히 화면이 사라졌다고 판단하지 않고 전환 애니메이션과 컨트롤러 생명주기를 함께 확인해 처리했습니다.</p>
+<p>자녀 이름의 첫 글자를 표시하는 부분도 코드 유닛만 잘라서는 한글을 안전하게 다룰 수 없었습니다. 그래서 grapheme cluster를 다루는 패키지를 사용했습니다.</p>
+<h2 id="사용한-기술과-현재-범위">사용한 기술과 현재 범위</h2>
+<p>Flutter와 Dart로 개발했고 로컬 저장소는 Hive와 Hive Flutter를 사용했습니다. 모델 생성에는 Hive Generator와 build_runner, CSV 처리에는 file_picker와 csv를 사용했으며 intl과 path_provider도 함께 썼습니다.</p>
+<p>OCR, Google Books 연동, AI 추천, 백업·복원은 화면 아이디어로만 남아 있고 구현하지 않았습니다. 독서 계획의 진행률도 실제 독서 기록에서 자동으로 계산되지 않으며 사용자가 직접 조절합니다.</p>
+<p>현재 Book Reading Manager는 AI 독서 앱이 아니라, 자녀별 로컬 독서 기록과 계획을 관리하는 초기 Flutter MVP입니다.</p>
 
+  </article>
 
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/flutter/">Flutter</a></li>
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/dart/">Dart</a></li>
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/hive/">Hive</a></li>
-      <li><a href="https://idiotspapa.github.io/GitBlog/tags/csv/">CSV</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://idiotspapa.github.io/GitBlog/projects/shop-floor-web-modernization/">
-    <span class="title">« 이전 페이지</span>
-    <br>
-    <span>생산현장 단말 시스템과 웹 전환</span>
-  </a>
-  <a class="next" href="https://idiotspapa.github.io/GitBlog/projects/overseas-trend-analysis/">
-    <span class="title">다음 페이지 »</span>
-    <br>
-    <span>해외 쇼핑몰 트렌드 분석 프로토타입</span>
-  </a>
-</nav>
-
-  </footer>
-</article>
+  <nav class="pf-project-nav">
+    <a href="/GitBlog/projects/overseas-trend-analysis/">← 해외 쇼핑몰 트렌드 분석 프로토타입</a>
+    <a href="/GitBlog/projects/shop-floor-web-modernization/">생산현장 단말 시스템과 웹 전환 →</a>
+  </nav>
+</div>
     </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://idiotspapa.github.io/GitBlog/">IdiotsPapa&#39;s Dev Blog</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+    <footer class="footer">
+  <span>&copy; 2026 [이름]</span>
+  <span> · </span>
+  <span>대구</span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
 
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a><script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var items = document.querySelectorAll('.pf-animate');
+    if (!items.length || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
     }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
         });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    items.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+
+
+<script>
+  let menu = document.getElementById('menu')
+  if (menu) {
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+      localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length <= 1) return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = '복사';
-
-        function copyingDone() {
-            copybutton.innerHTML = '복사 완료!';
-            setTimeout(() => {
-                copybutton.innerHTML = '복사';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
+  });
 </script>
 </body>
 
