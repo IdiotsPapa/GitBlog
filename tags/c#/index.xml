@@ -23,11 +23,25 @@
       <description>분산된 서버 상태를 수집하고 장애 징후를 알림·대시보드로 확인하도록 만든 운영 지원 시스템</description>
     </item>
     <item>
+      <title>사내 제안관리 시스템</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/proposal-system/</link>
+      <pubDate>Tue, 21 Jul 2026 13:19:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/proposal-system/</guid>
+      <description>제안 등록·검토·실시·등급 심사·포상·성과 분석을 한 흐름으로 묶은 사내 시스템</description>
+    </item>
+    <item>
+      <title>사내 Ticket 시스템</title>
+      <link>https://idiotspapa.github.io/GitBlog/projects/ticket-system/</link>
+      <pubDate>Tue, 21 Jul 2026 13:18:00 +0900</pubDate>
+      <guid>https://idiotspapa.github.io/GitBlog/projects/ticket-system/</guid>
+      <description>IT 지원 요청부터 결재, SAP 변경 이관, 운영 대시보드까지 묶은 사내 업무 시스템</description>
+    </item>
+    <item>
       <title>출장 정산 시스템</title>
       <link>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</link>
       <pubDate>Tue, 21 Jul 2026 00:10:00 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/projects/erp-trip-settlement/</guid>
-      <description>출장·교육 신청/정산, Report, 기준정보 — 사내 웹 개발·운영 (익명)</description>
+      <description>출장·교육 신청/정산, Report, 기준정보 — 사내 웹 개발·운영</description>
     </item>
   </channel>
 </rss>
