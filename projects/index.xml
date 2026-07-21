@@ -30,11 +30,11 @@
       <description>최소 메타데이터를 수집해 순위·리뷰 변화를 점수화하는 데이터 파이프라인 프로토타입</description>
     </item>
     <item>
-      <title>FreshPeach — .NET 8 &#43; Vue 개발 환경 실험</title>
+      <title>FreshPeach — .NET 8 &#43; Vue 개발 환경 검증</title>
       <link>https://idiotspapa.github.io/GitBlog/projects/freshpeach-stack-spike/</link>
       <pubDate>Tue, 21 Jul 2026 13:25:00 +0900</pubDate>
       <guid>https://idiotspapa.github.io/GitBlog/projects/freshpeach-stack-spike/</guid>
-      <description>ASP.NET Core API와 Vue 프론트엔드의 분리 구성을 확인한 초기 기술 실험</description>
+      <description>ASP.NET Core API와 Vue 프론트엔드의 분리 구성을 확인한 초기 기술 검증</description>
     </item>
     <item>
       <title>콜센터 대응 프로세스 시스템</title>
