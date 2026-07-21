@@ -2,7 +2,7 @@
 date = '2026-07-21T13:28:00+09:00'
 draft = false
 title = '생산현장 단말 시스템과 웹 전환'
-tags = ['C#', '.NET 8', 'React', 'Legacy Modernization']
+tags = ['C#', 'DevExpress', '.NET 8', 'React', 'Legacy Modernization']
 summary = '장기간 운영된 설치형 현장 시스템을 분석하고 .NET 8·React 기반 웹으로 점진 전환한 사례'
 period = '2019 — 2026'
 role = '유지보수·웹 전환 PoC'
