@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://idiotspapa.github.io/GitBlog/sitemap.xml

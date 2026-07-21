@@ -1,0 +1,141 @@
+{{- define "main" }}
+{{- $p := site.Data.portfolio }}
+{{- $projects := where site.RegularPages "Section" "projects" }}
+{{- $featured := where $projects "Params.featured" true }}
+{{- $featured = sort $featured "Params.order" }}
+{{- $more := where $projects "Params.featured" "!=" true }}
+{{- $more = sort $more "Params.order" }}
+
+<div class="pf-page">
+  <section class="pf-hero" id="top">
+    <div class="pf-hero__inner pf-animate">
+      <p class="pf-hero__role">{{ $p.profile.title }}</p>
+      <h1 class="pf-title pf-title--hero">{{ $p.profile.name }}</h1>
+      <p class="pf-subtitle">{{ $p.profile.headline }}</p>
+      <p class="pf-subtitle" style="white-space: pre-line;">{{ $p.profile.summary }}</p>
+      <div class="pf-hero__meta">
+        <span>{{ $p.profile.years }}년+ 경력</span>
+        <span>{{ $p.profile.stack_line }}</span>
+        <span>{{ $p.profile.location }}</span>
+      </div>
+      <div class="pf-actions">
+        <a class="pf-btn pf-btn--primary" href="#work">Selected Work</a>
+        <a class="pf-btn" href="#contact">Contact</a>
+        <a class="pf-btn" href="{{ "projects/" | relURL }}">All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pf-divider"></div>
+
+  <section class="pf-section pf-animate" id="profile">
+    <span class="pf-label">Profile</span>
+    <h2 class="pf-title">사내 시스템 개발·운영</h2>
+    <p class="pf-subtitle">{{ $p.profile.summary }}</p>
+    <div class="pf-grid-2">
+      <div class="pf-card">
+        <p class="pf-card__role">Core Stack</p>
+        <p class="pf-card__summary">C# / ASP.NET — {{ $p.profile.stack_line }}<br>MSSQL, 사내 ERP·전자결재 연동</p>
+      </div>
+      <div class="pf-card">
+        <p class="pf-card__role">Extension</p>
+        <p class="pf-card__summary">React · Vue · Flutter · Python<br>Cursor · Claude 기반 AI 실험</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-section pf-animate" id="experience">
+    <span class="pf-label">Experience</span>
+    <h2 class="pf-title">경력</h2>
+    {{- range $p.experience }}
+    <div class="pf-card" style="margin-bottom: 1.25rem;">
+      <p class="pf-card__period">{{ .period }}</p>
+      <h3 class="pf-card__title">{{ .company }}</h3>
+      <p class="pf-card__role">{{ .role }}</p>
+      <ul style="margin: 0; padding-left: 1.1rem; color: var(--pf-text-muted); line-height: 1.7; font-size: 0.92rem;">
+        {{- range .highlights }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+  </section>
+
+  <section class="pf-section pf-animate" id="work">
+    <span class="pf-label">Selected Work</span>
+    <h2 class="pf-title">주요 프로젝트</h2>
+    <p class="pf-subtitle">채용 적합도가 높은 현업·AI 프로젝트입니다. 상세는 각 케이스 스터디에서 확인할 수 있습니다.</p>
+    <div class="pf-featured-grid">
+      {{- range $featured }}
+      <article class="pf-card">
+        <p class="pf-card__period">{{ .Params.period }}</p>
+        <h3 class="pf-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="pf-card__role">{{ .Params.role }}</p>
+        <p class="pf-card__summary">{{ .Summary }}</p>
+        <div class="pf-tags">
+          {{- range first 4 .Params.tags }}
+          <span class="pf-tag">{{ . }}</span>
+          {{- end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="pf-section pf-animate" id="more">
+    <span class="pf-label">More Projects</span>
+    <h2 class="pf-title">추가 프로젝트</h2>
+    <div class="pf-more-grid">
+      {{- range $more }}
+      <article class="pf-card">
+        <p class="pf-card__period">{{ .Params.period }}</p>
+        <h3 class="pf-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="pf-card__role">{{ .Params.role }}</p>
+        <p class="pf-card__summary">{{ .Summary | truncate 120 }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="pf-section pf-animate" id="skills">
+    <span class="pf-label">Skills</span>
+    <h2 class="pf-title">기술</h2>
+    <div class="pf-skills">
+      {{- range $p.skills }}
+      <div class="pf-skill-group">
+        <h3>{{ .group }}</h3>
+        <ul>
+          {{- range .items }}
+          <li>{{ . }}</li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="pf-section pf-animate" id="principles">
+    <span class="pf-label">Working Principles</span>
+    <h2 class="pf-title">작업 원칙</h2>
+    <div class="pf-principles">
+      {{- range $p.principles }}
+      <div class="pf-principle">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="pf-section pf-animate" id="contact">
+    <span class="pf-label">Contact</span>
+    <h2 class="pf-title">연락</h2>
+    <p class="pf-subtitle">지원·협업 문의는 아래로 연락 주세요.</p>
+    <div class="pf-contact-links">
+      <a href="mailto:{{ $p.contact.email }}">{{ $p.contact.email }}</a>
+      <a href="{{ $p.contact.github }}" target="_blank" rel="noopener noreferrer">GitHub — {{ $p.contact.github_label }}</a>
+      <span style="color: var(--pf-text-muted);">{{ $p.contact.location }}</span>
+    </div>
+  </section>
+</div>
+{{- end }}

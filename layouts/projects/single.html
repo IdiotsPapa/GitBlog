@@ -1,0 +1,36 @@
+{{- define "main" }}
+<div class="pf-page pf-project-page">
+  <header class="pf-project-header pf-animate">
+    <a class="pf-back" href="{{ "projects/" | relURL }}">← Projects</a>
+    <span class="pf-label">{{ .Params.category | default "Case Study" }}</span>
+    <h1 class="pf-title">{{ .Title }}</h1>
+    <div class="pf-project-meta">
+      {{- with .Params.period }}<span>{{ . }}</span>{{ end }}
+      {{- with .Params.role }}<span>{{ . }}</span>{{ end }}
+      {{- with .Params.category }}<span>{{ . }}</span>{{ end }}
+    </div>
+    {{- if .Params.tags }}
+    <div class="pf-tags">
+      {{- range .Params.tags }}
+      <span class="pf-tag">{{ . }}</span>
+      {{- end }}
+    </div>
+    {{- end }}
+  </header>
+
+  <article class="pf-project-content pf-animate">
+    {{- .Content }}
+  </article>
+
+  <nav class="pf-project-nav">
+    {{- with .PrevInSection }}
+    <a href="{{ .RelPermalink }}">← {{ .Title }}</a>
+    {{- else }}
+    <span></span>
+    {{- end }}
+    {{- with .NextInSection }}
+    <a href="{{ .RelPermalink }}">{{ .Title }} →</a>
+    {{- end }}
+  </nav>
+</div>
+{{- end }}

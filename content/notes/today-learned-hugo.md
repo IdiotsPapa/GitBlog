@@ -4,7 +4,7 @@ draft = false
 title = 'Hugo에서 콘텐츠를 구분하는 방법'
 +++
 
-Hugo는 `content` 아래의 디렉터리를 기준으로 섹션을 구분한다.
+Hugo를 설정하면서 콘텐츠를 나누는 방법을 정리했다. `content` 아래의 디렉터리가 각 섹션이 된다.
 
 ```text
 content/
@@ -13,7 +13,7 @@ content/
 └── projects/    # 프로젝트 포트폴리오
 ```
 
-각 Markdown 파일의 front matter에는 제목·작성일·공개 여부를 넣는다.
+각 Markdown 파일의 front matter에는 제목, 작성일, 공개 여부를 넣었다.
 
 ```toml
 +++
@@ -29,4 +29,4 @@ draft = false
 hugo server -D
 ```
 
-프로젝트 목록처럼 섹션 자체에 설명이 필요하면 `_index.md`를 사용한다. 개별 글을 늘리기 전에 섹션의 역할을 먼저 정해 두면 메뉴와 URL 구조가 단순해진다.
+프로젝트 목록처럼 섹션 자체에 설명이 필요할 때는 `_index.md`를 사용한다. 섹션의 역할을 먼저 정해 두니 메뉴와 URL 구조를 단순하게 유지하기 쉬웠다.

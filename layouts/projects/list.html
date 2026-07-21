@@ -1,0 +1,49 @@
+{{- define "main" }}
+{{- $projects := where site.RegularPages "Section" "projects" }}
+{{- $featured := where $projects "Params.featured" true }}
+{{- $featured = sort $featured "Params.order" }}
+{{- $more := where $projects "Params.featured" "!=" true }}
+{{- $more = sort $more "Params.order" }}
+
+<div class="pf-page pf-project-page">
+  <header class="pf-project-header pf-animate">
+    <a class="pf-back" href="{{ "" | absLangURL }}">← Home</a>
+    <span class="pf-label">Projects</span>
+    <h1 class="pf-title">All Projects</h1>
+    <p class="pf-subtitle">사내 시스템·AI·모바일·웹 실험을 모아 둔 포트폴리오입니다. 현업 내용은 익명 처리했습니다.</p>
+  </header>
+
+  <section class="pf-section pf-animate">
+    <h2 class="pf-title" style="font-size: 1.5rem;">Featured</h2>
+    <div class="pf-featured-grid">
+      {{- range $featured }}
+      <article class="pf-card">
+        <p class="pf-card__period">{{ .Params.period }}</p>
+        <h3 class="pf-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="pf-card__role">{{ .Params.role }} · {{ .Params.category }}</p>
+        <p class="pf-card__summary">{{ .Summary }}</p>
+        <div class="pf-tags">
+          {{- range first 5 .Params.tags }}
+          <span class="pf-tag">{{ . }}</span>
+          {{- end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="pf-section pf-animate">
+    <h2 class="pf-title" style="font-size: 1.5rem;">More</h2>
+    <div class="pf-more-grid">
+      {{- range $more }}
+      <article class="pf-card">
+        <p class="pf-card__period">{{ .Params.period }}</p>
+        <h3 class="pf-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="pf-card__role">{{ .Params.role }}</p>
+        <p class="pf-card__summary">{{ .Summary | truncate 120 }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+</div>
+{{- end }}

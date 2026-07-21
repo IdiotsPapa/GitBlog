@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>노트 on [이름] — Portfolio</title><link>https://idiotspapa.github.io/GitBlog/notes/</link><description>Recent content in 노트 on [이름] — Portfolio</description><generator>Hugo -- 0.148.1</generator><language>ko</language><lastBuildDate>Thu, 17 Jul 2025 00:39:49 +0900</lastBuildDate><atom:link href="https://idiotspapa.github.io/GitBlog/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo에서 콘텐츠를 구분하는 방법</title><link>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</link><pubDate>Thu, 17 Jul 2025 00:39:49 +0900</pubDate><guid>https://idiotspapa.github.io/GitBlog/notes/today-learned-hugo/</guid><description>&lt;p>Hugo를 설정하면서 콘텐츠를 나누는 방법을 정리했다. &lt;code>content&lt;/code> 아래의 디렉터리가 각 섹션이 된다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── posts/ # 일반 글
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── notes/ # 짧은 학습 기록
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── projects/ # 프로젝트 포트폴리오
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>각 Markdown 파일의 front matter에는 제목, 작성일, 공개 여부를 넣었다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="err">+++&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">title&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;글 제목&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">date&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;2025-07-17T00:00:00+09:00&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">draft&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">+++&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>작업 중인 글은 &lt;code>draft = true&lt;/code>로 두면 일반 빌드에서 제외된다. 로컬에서 초안을 함께 확인할 때만 아래처럼 실행한다.&lt;/p></description></item></channel></rss>

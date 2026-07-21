@@ -1,0 +1,35 @@
+<footer class="footer">
+  <span>&copy; {{ now.Year }} {{ site.Data.portfolio.profile.name | default site.Title }}</span>
+  <span> · </span>
+  <span>{{ site.Data.portfolio.contact.location | default "대구" }}</span>
+</footer>
+
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+{{- partial "extend_footer.html" . }}
+
+<script>
+  let menu = document.getElementById('menu')
+  if (menu) {
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+      localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length <= 1) return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
