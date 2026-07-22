@@ -8,7 +8,8 @@ period = '2019 — 2026'
 role = '유지보수·웹 전환 PoC'
 featured = true
 order = 5
-category = 'work'+++
+category = 'work'
++++
 
 생산현장 작업자가 작업지시·진행·실적·비가동·불량을 처리하던 단말 시스템을 유지보수하고, 웹 전환 가능성을 검토한 작업입니다.
 

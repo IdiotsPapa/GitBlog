@@ -8,7 +8,8 @@ period = '2026.03 — 04'
 role = '설계·구현'
 featured = false
 order = 6
-category = 'ai'+++
+category = 'ai'
++++
 
 트렌드 하나를 골라 숏폼으로 올리기까지 손이 많이 갑니다. 자료를 모으고 대본·음성·영상·자막·게시까지 이어지는 흐름을 어디까지 자동화할 수 있는지 확인하려고 Python MVP를 만들었습니다.
 
